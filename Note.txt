@@ -1,0 +1,13 @@
+aws:
+    the leading cloud provider
+    the value of certification:
+        most expansive viewe possible of Cloud Architecuture and AWS.
+            as a Bird's eye view.
+    Note: AWS certifications do not validate programming, techincal diagrammign, code management. other techncal skills.
+        Begineer: should use 30 hours
+        Experi: 6 hrs
+        Average: 24 hrs (50% lecture and labs, 50% practice exams)
+    Online Practice:
+        ExamPro: https://www.exampro.co/clf-c02
+        
+    
