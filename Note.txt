@@ -9,5 +9,117 @@ aws:
         Average: 24 hrs (50% lecture and labs, 50% practice exams)
     Online Practice:
         ExamPro: https://www.exampro.co/clf-c02
-        
-    
+
+    Cloud Practitioner:
+      4 domains:
+        1) Cloud Concepts: 24% (15-16 questions)
+        2) Security and Compliance: 30% (19-20 questions)
+        3) Cloud Technology and Services: 34% (22 questions)
+        4) Billing, Pricing and Support: 12% (8 questions)
+      Test Flow:
+        in-person test center or Online
+          Person Vue Online:
+            proctor:
+              supervisor who moitors students during exam.
+      Passing Grade:
+        need to get "around scored" 70% to pass:
+          mark: 700/1000
+          65 questions:
+            50 Scrored Questions and 15 Unscrored Questions(not count for score).
+            we can afford to get 15 scrored questions wrong.
+            no penalty for wrong questions.
+          format:
+            Multiple Choice and Multiple Answer:
+          Unscrored questions:
+            to evaluate the introduction of new questions.
+            to determine if exam is too easy and passing score or question difficult needs to be increased.
+            to discover users who to cheat exam or steal "dump" exam.
+      Exam time:
+        1.5 hours:
+          1.5 mins per question
+          exam time is 90 mins
+          seat time is 120 mins.
+    1) Cloud Computing
+      def: the practice of using a network of remote servers hosted on internet
+        to store, manage, process data rather than local/personal server, computer.
+          On-Premise:
+            You own the servers, hire IT people, pay or rent the real-estate, take all risk.
+          Clud Providers:
+            someone else own servers, hire IT people, pay or rent real-estate,
+            you are responsible for your configuration cloud services and code.
+      evaluation:
+        dedicated server:
+          one physical machine dedicated to single a business, run single web-app.
+          Note: very expensive, high maintenane, high Security.
+        virtual private server(VPS):
+          one physical machine dedicated to a single business, 
+          one physical machine is virtualized into a sub-machines
+          runs Multiple web-apps.
+          Note: better utilization and isolation of resources.
+        shared hosting:
+          one physical machine shared by hundred of businesses,
+          Note: very cheap, limited functionality, poor isonlation.
+        Cloud Hosting:
+          Multiple physical machines that act as one system.
+          abstracted into multiple cloud services.
+          Note: flexible, scalable, cost-effective, high configurablility.
+      Amazon:
+        headquartered in Seattle, washington.
+        founded 1994, by Jeff Bezos. startd as online store for books and then expended into:
+        cloud computing(Amazon Web Services)
+        digital streaming:
+          Amazon Prime Video,
+          Amazon Prime Music,
+          Twitch.tv
+        Grocery Stores(whole foods market)
+        AI
+        Low orbit satellites(kuniper systems)
+        and more..
+        current CEO is Andy Jassy previously the ceo of aws.
+        Jeff Bezos can focus on space travel.
+      AWS:
+        def: Amazon web service
+        launched 2006, leading cloud service provider in world.
+        first AWS service: SQS (simple queue service) on 2004
+        2006 march: s3(simple storage service)
+        2006 august: Ec2(elastic compute cloud)
+        2010 Nov: amazon.com's retail sites migrated to aws.
+        2013: offering a certification program for computer Engineer.
+        Cloud Service Provider(CSP);
+          provite multiple services.
+            those can be chained together to create cloud Architecuture.
+            those are accessable via single unified api eg: aws api.
+            those utilized metered billing based on usage eg: per second, per hour.
+            those have rich monitoring eg: aws cloudtrail.
+            those have IaaS offering.
+            those offers automation via IaC.
+          Note:
+            if a company offers a multiple cloud services under a single UI 
+            but do not meet most of all these requirements, it would be referred to as Cloud Platform eg: twilio, HashiCorp, Databricks.
+            MM: Company တစ်ခုက services အများကြီးပေးပေမယ့် CSP လို feature အကုန်မပြည့်စုံဘူးဆိုရင် Cloud Platform လို့ခေါ်တယ်။
+          Landscape of CSPs:
+            market share, service coverage, global infrastructure, enterprise adoption စတာတွေပေါ်မူတည်ပြီး tier အလိုက်ခွဲလို့ရ:
+              top tier: aws, microsoft azure, google cloud Platform, alibaba cloud
+              mid tier: ibm cloud, oracle cloud, huawei cloud, tencent cloud.
+              light tier: vultr, digital ocean, akimai connected cloud(linode)
+              private tier: openstack (Rackspace), Apache CloudStack, Vmware vSphere.
+        Gartner Magic Quadrant(MQ):
+          leader: aws -> microsoft -> google -> alibaba cloud -> oracle
+          challengers: tencent cloud, ibm, huawei cloud.
+          Note:
+            graph structure:
+                                    High Ability to Execute
+                                              ↑
+                                              |
+                        Challengers           |            Leaders
+                                              |
+                                              |
+                ------------------------------|----------------------------→ High Completeness of Vision
+                                              |
+                        Niche Players         |            Visionaries
+                                              |
+                                              |
+                                    Low Ability to Execute
+              Horizontal axis = Completeness of Vision (future plan နဲ့ innovation ကိုကြည့်တာပါ)
+              Vertical axis = Ability to Execute (company က သူတို့ service ကို တကယ်ကောင်းကောင်း deliver လုပ်နိုင်လားဆိုတာကိုကြည့်တာပါ)
+              Gartner MQ မှာ အပေါ်ဘက်ကိုတက်လေလေ execution ကောင်းလေလေ ဖြစ်ပြီး ညာဘက်ကိုသွားလေလေ future vision ကောင်းလေလေ
