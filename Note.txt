@@ -86,6 +86,7 @@ aws:
         2010 Nov: amazon.com's retail sites migrated to aws.
         2013: offering a certification program for computer Engineer.
         Cloud Service Provider(CSP);
+          are IaaS.
           provite multiple services.
             those can be chained together to create cloud Architecuture.
             those are accessable via single unified api eg: aws api.
@@ -123,3 +124,67 @@ aws:
               Horizontal axis = Completeness of Vision (future plan နဲ့ innovation ကိုကြည့်တာပါ)
               Vertical axis = Ability to Execute (company က သူတို့ service ကို တကယ်ကောင်းကောင်း deliver လုပ်နိုင်လားဆိုတာကိုကြည့်တာပါ)
               Gartner MQ မှာ အပေါ်ဘက်ကိုတက်လေလေ execution ကောင်းလေလေ ဖြစ်ပြီး ညာဘက်ကိုသွားလေလေ future vision ကောင်းလေလေ
+        Four most common types of cloud services for IaaS:
+          Compute:
+            imagine having a virtual computer that can run app, programs..
+            eg: EC2 virtual machines
+          Storage:
+            imagine having a virtual hard-drive to store files.
+            eg: EBS virtual hard drives
+          Networking:
+            imaging having a virtual network defining internet connections or network isolation
+            between services or outbound to internet.
+            eg: RDS SQL databases
+          Database:
+            imaging a virtual database for storing reporting data or database.
+            eg: VPC Private Cloud Network
+          Note:
+            AWS has over 200+ cloud services.
+        Evolution of Computing:
+          dedicated:
+            a physical server wholly by a signle customer.
+            can't Vertical scale
+            replacing a server is very difficult
+          vms:
+            can run multiple virtual machines on one machine.
+            Hypervisor is the software layer that you run the VMs
+            a physical server shared by multiple customers
+            multiple apps can result in conflicts in resource sharing.
+          containers:
+            virtual machine running multiple containers
+            Docker daemon is the name of software layer.
+            can maximize the utilize of the available capacity
+            your containers share the same underlying OS so containers are more efficient than multiple vms.
+            multiple apps can run side by side without being limited to same os requirements and will not cause conflicts during resources sharing.
+          functons:
+            are managed vms running managed containers.
+            know as serverless compute.
+            you upload a piece of code, choose th amt of memory and duration.
+            only responsible for code and data.
+            very-cost effective, only pay for time code running,
+            cold starts is a side-effect of this setup.
+        Type of Cloud Computing:
+          SaaS:
+            for customers
+            a product that is run and managed by service provider,
+            Don't worry about how the service is maintenaned.
+            eg: salesforce, office 365, gmail.
+          PaaS:
+            for Developers
+            focus on deployment, management of your apps.
+            Don't worry about, provisioning, configuring or understanding the hardware or OS.
+            eg: elastic beanstack, heroku, google app engine.
+          IaaS:
+            for admins
+            the basic building for cloud IT. provides access to networking features, computers and storage.
+            Don't worry about IT staff, data centers and hardware.
+            eg: Azure, aws, oracle cloud.
+        Cloud Computing deployment models:
+          Public Cloud:
+            everything(workload or project) is built on the CSP.
+            also know as: Cloud-Native or Cloud First.
+          
+          
+
+
+        
