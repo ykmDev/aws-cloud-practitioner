@@ -183,6 +183,467 @@ aws:
           Public Cloud:
             everything(workload or project) is built on the CSP.
             also know as: Cloud-Native or Cloud First.
+            MM Note:
+              Public Cloud ဆိုတာ workload, application, database, storage အားလုံးကို cloud provider ပေါ်မှာပဲ တည်ဆောက်ထားတာပါ။
+              ဥပမာအားဖြင့် company တစ်ခုက server, database, storage, monitoring အကုန်လုံးကို Amazon Web Services ပေါ်မှာပဲ run လုပ်နေရင် Public Cloud ဖြစ်ပါတယ်။
+              ဒီ model ကို Cloud-Native သို့မဟုတ် Cloud-First လို့လည်းခေါ်ပါတယ်။
+              အားသာချက်
+                Setup မြန်တယ်
+                Initial cost နည်းတယ်
+                Scaling လွယ်တယ်
+                Maintenance ကို CSP က handle လုပ်ပေးတယ်
+              အားနည်းချက်
+                Internet မရှိရင် access ခက်တယ်
+                Vendor lock-in ဖြစ်နိုင်တယ်
+                Sensitive data တွေအတွက် compliance issue ဖြစ်နိုင်တယ်
+          Private Cloud:
+            everything build on company's datacenters
+            also know as On-Premise
+            the cloud could be OpenStack.
+            MM Note:
+              Private Cloud ဆိုတာ infrastructure အားလုံးကို company ကိုယ်ပိုင် datacenter ထဲမှာပဲ run လုပ်တာပါ။
+              On-Premise လို့လည်းခေါ်ပါတယ်။
+              ဥပမာ company တစ်ခုက ကိုယ်ပိုင် server room, storage, firewall, virtualization platform နဲ့ cloud environment တည်ဆောက်ထားတာပါ။
+              ဒီလို private cloud တည်ဆောက်ဖို့ OpenStack လို platform တွေကို အသုံးပြုနိုင်ပါတယ်။
+              အားသာချက်
+                Security ပိုကောင်းတယ်
+                Full control ရတယ်
+                Sensitive data တွေအတွက် သင့်တော်တယ်
+              အားနည်းချက်
+                Cost ကြီးတယ်
+                Hardware maintenance လုပ်ရတယ်
+                Scaling ခက်တယ်
+          Hybrid Cloud:
+            using both On-Premise and 
+            a cloud service provider.
+            MM Note:
+              Hybrid Cloud ဆိုတာ On-Premise infrastructure နဲ့ Public Cloud ကို အတူပေါင်းသုံးတာပါ။
+              ဥပမာ -
+                Customer data ကို company datacenter ထဲမှာထားမယ်
+                Web app နဲ့ backup system ကို Microsoft Azure ပေါ်မှာ run မယ်
+                ဒီ model က security နဲ့ scalability ကို balance လုပ်နိုင်ပါတယ်။
+                အားသာချက်
+                  Sensitive data ကို local မှာထားနိုင်တယ်
+                  Cloud scalability ကိုလည်း အသုံးပြုနိုင်တယ်
+                  Existing infrastructure ကို ဆက်သုံးနိုင်တယ်
+                အားနည်းချက်
+                  Management ပိုရှုပ်တယ်
+                  Networking setup ပိုခက်တယ်
+                  Integration cost ရှိတယ်
+          Cross-Cloud:
+            using multiple cloud privproviders
+            Aka mulit-cloud
+            eg: amazon eks, azure arc, gcp kubernetes engine.
+            MM Note:
+              Cross-Cloud ဆိုတာ cloud provider တစ်ခုတည်းမဟုတ်ဘဲ multiple cloud provider တွေကို အတူသုံးတာပါ။
+              Multi-Cloud လို့လည်းခေါ်ပါတယ်။
+              ဥပမာ -
+                App server ကို Amazon Web Services ပေါ်မှာ run မယ်
+                AI service ကို Google Cloud Platform ပေါ်မှာသုံးမယ်
+                Internal tools ကို Microsoft Azure ပေါ်မှာ run မယ်
+                Cross-cloud management အတွက် Amazon EKS, Azure Arc, Google Kubernetes Engine တို့လို tools တွေကို အသုံးပြုနိုင်ပါတယ်။
+                အားသာချက်
+                  Vendor lock-in နည်းတယ်
+                  Best service ကို provider တစ်ခုချင်းစီကနေရွေးသုံးနိုင်တယ်
+                  Disaster recovery ပိုကောင်းတယ်
+                အားနည်းချက်
+                  Management အရမ်းရှုပ်နိုင်တယ်
+                  Cost tracking ခက်နိုင်တယ်
+                  Team skill requirement ပိုမြင့်တယ်
+            Note:
+              Vendor lock-in ဆိုတာ company တစ်ခုက provider တစ်ခုတည်းရဲ့ services, tools, APIs တွေကို အရမ်းအများကြီးမှီခိုသုံးနေပြီး နောက်ပိုင်း provider ပြောင်းချင်တဲ့အခါ အရမ်းခက်သွားတာကို ဆိုလို
+              Vendor lock-in နည်းတယ် ဆိုတာ provider တစ်ခုတည်းကို အရမ်းမမှီခိုဘဲ standard technologies တွေသုံးထားတာပါ။
+              ဥပမာ -
+                Container ကို Docker နဲ့ build လုပ်ထားတယ်
+                Orchestration ကို Kubernetes သုံးတယ်
+                Database ကို standard PostgreSQL သုံးတယ်
+                ဒီလိုဆိုရင် Amazon Web Services ကနေ Google Cloud Platform သို့မဟုတ် Microsoft Azure ကို ပြောင်းရတာ ပိုလွယ်ပါတယ်။
+        New account:
+          account alias: edit,delete
+          iam: identity acccess management:
+            access key: api only usecase.
+            aws management console: dashboard access.
+          region:
+            us-east-1: default region.
+            region dependancy none: Global servcies: eg: CloudFront, s3,
+            region depandency: ec2
+          overbilling story:
+            eg: if you use some mis high usage configuration, eg: ElasticCache, with cache.r6g.large. cache.r6g.large has $0.1648 per hour, so: $0.1648 * 730 hr = $120.
+            On this case, we are very worry, and then go to Support Center's create case => acccount billing support -> Type : billing -> charge inquiry -> fill form.
+          aws budgets:
+            for first two is free.
+            monthly, recurring budget, Fixed type,
+            add an alert threshold => threshold: 80, budgeted amount, actual. create.
+            Note:
+              Budgeted amount = ကိုယ်သတ်မှတ်ထားတဲ့ budget limit
+              Current amount = လက်ရှိအချိန်အထိ တကယ်အသုံးပြုပြီးသား amount
+              Forecasted amount = လကုန်သွားတဲ့အချိန်မှာ ဘယ်လောက်ကုန်မယ်လို့ AWS က ခန့်မှန်းထားတဲ့ amount
+              ဥပမာ -
+                Budget = $100
+                Current spend = $60
+                Forecasted spend = $120
+
+                ဆိုရင်
+
+                Current vs Budgeted = $60 vs $100
+                အခုချိန်ထိ budget 60% သုံးပြီးသွားပြီလို့ဆိုလိုပါတယ်။
+                Forecasted vs Budgeted = $120 vs $100
+                လကုန်ရင် budget ထက် $20 ပိုကုန်နိုင်တယ်လို့ AWS က ခန့်မှန်းထားတာပါ။
+
+                ဥပမာ လ 10 ရက်နေ့မှာတင် $70 သုံးပြီးသွားရင် AWS က လကုန်မှာ $200 ကျော်ကုန်နိုင်တယ်လို့ forecast ပြနိုင်ပါတယ်။
+                ဒါကြောင့် -
+                Current vs Budgeted = အခုလက်ရှိအခြေအနေ
+                Forecasted vs Budgeted = လကုန်ရင်ဖြစ်နိုင်တဲ့အခြေအနေ
+          sns:
+            simple notification service:
+              application တစ်ခုက event ဖြစ်လာတဲ့အခါ subscriber အများကြီးကို notification ပို့ဖို့သုံးပါတယ်။
+              ဥပမာ -
+                Order created ဖြစ်ရင် admin email ပို့မယ်
+                Payment success ဖြစ်ရင် SMS ပို့မယ်
+                User signup ဖြစ်ရင် welcome email ပို့မယ်
+              SNS ရဲ့ အဓိက idea က publisher တစ်ခုက message တစ်ခု publish လုပ်လိုက်ရင် subscriber အများကြီးကို တစ်ပြိုင်တည်းပို့ပေးတာပါ။
+          free tier:
+            ec2: 750 hrs, s3 5gb, 
+            Important:
+              should be check on billing dashboard's billing Preferences -> Check on Receive Free Tier Usage Alerts.
+          billing alarm:
+            CloudWatch:
+              alarms -> Billing -> 10 free alarms and 1000 free e-mail notification each month.
+              Create alarm -> select matric -> Billing -> By Service -> conditions -> static, Greater, than 50 ->
+              Notification -> In alarm -> choose Create new topic -> fill title, email -> after set email, confirm from our email's inbox ->
+              fill alarm name and desc.
+          turning on MFA:
+            go iam user list -> add mfa -> for app, virtual mfa -> install from supported list.
+          innovation waves:
+            kondratiev waves:
+              K-Waves are thpothesized cycle-like phenomena in the global world economy.
+              this is closely connected with technology life cycles.
+              MM Note:
+                Kondratiev Waves (K-Waves)
+                K-Waves ဆိုတာ global economy မှာ နှစ် 40 မှ 60 လောက်အတွင်း long-term growth နဲ့ slowdown cycle တွေဖြစ်နေတတ်တယ်ဆိုတဲ့ theory ပါ။
+                ဒီ idea ကို Nikolai Kondratiev က တင်ပြခဲ့တာဖြစ်ပြီး နောက်ပိုင်း Joseph Schumpeter က technology innovation နဲ့ချိတ်ဆက်ပြီး ပိုလေ့လာခဲ့ပါတယ်။
+                K-Wave တစ်ခုက များသောအားဖြင့် technology အသစ်တစ်ခုကြောင့် စတင်တယ်။
+                ဥပမာ -
+                  Steam engine
+                  Railways
+                  Electricity
+                  Automobile
+                  Computer
+                  Internet
+                  AI
+                Technology အသစ်တစ်ခု ပေါ်လာရင် economy တစ်ခုလုံးကိုပြောင်းလဲစေတယ်။ Company အသစ်တွေ ပေါ်လာတယ်၊ jobs အသစ်တွေ ဖြစ်လာတယ်၊ investment များလာတယ်၊ productivity တိုးလာတယ်။
+                ဒါပေမယ့် technology က mature ဖြစ်လာတဲ့အခါ growth ကနှေးသွားတယ်၊ market saturation ဖြစ်လာတယ်၊ bubble ဖြစ်လာနိုင်တယ်၊ recession ဝင်နိုင်တယ်။ ပြီးရင် technology အသစ်တစ်ခု ထပ်ပေါ်လာပြီး wave အသစ်စတယ်။
+          Burning Platform:
+            a term used when a company abandons old technology for new technology with the uncertainly of success and 
+            can be motivated by fear that the organiztation future survival hinges on its digital transformation.
+            MM Note:
+              Burning Platform ဆိုတာ company တစ်ခုက old technology, old business model, old system တွေကို ဆက်သုံးနေမယ်ဆိုရင် နောင်မှာ survive မဖြစ်နိုင်တော့ဘူးလို့ထင်ပြီး risk ရှိပေမယ့် technology အသစ်တွေကို မဖြစ်မနေပြောင်းသုံးရတဲ့အခြေအနေကို ဆိုလိုပါတယ်။
+              အဓိက idea က - “မပြောင်းရင် ပိုအန္တရာယ်များတယ်၊ ပြောင်းရင်တော့ risk ရှိပေမယ့် survive ဖြစ်နိုင်တယ်” ဆိုတဲ့ mindset ပါ။
+              ဥပမာ -
+                Traditional retail store တစ်ခုက online shopping platform မလုပ်ဘူးဆိုရင် survive မဖြစ်နိုင်တော့တာ
+                Old on-premise system တွေကို cloud မပြောင်းရင် maintenance cost ကြီးလာတာ
+                Legacy application တွေကို mobile app, SaaS, AI service တွေမပြောင်းရင် competitor တွေနောက်ကျန်သွားတာ
+              Burning Platform ဖြစ်လာတဲ့အခါ company တွေက -
+              Legacy system တွေကို ဖျက်ပြီး cloud ပြောင်းတယ်
+              Manual process တွေကို automation လုပ်တယ်
+              Old software တွေကို modern architecture ပြောင်းတယ်
+              Digital transformation ကို မြန်မြန်လုပ်တယ်
+              New technology ကို risk ရှိပေမယ့် invest လုပ်တယ်
+              ဥပမာ famous case တစ်ခုက Nokia ဖြစ်ပါတယ်။
+          digital transformation checklist:
+            Digital Transformation ဆိုတာ company ရဲ့ old systems, manual processes, legacy technology တွေကို modern technology နဲ့ပြောင်းပြီး business ကို ပိုမြန်၊ ပိုလွယ်၊ ပို scalable ဖြစ်အောင်လုပ်တာပါ။
+            အဓိက checklist က -
+              Business goal ရှင်းရမယ်
+              Existing systems ကို review လုပ်ရမယ်
+              Cloud / infrastructure plan ရှိရမယ်
+              Old applications ကို modernize လုပ်ရမယ်
+              Security နဲ့ data protection ကိုပြင်ဆင်ရမယ်
+              Team skill နဲ့ training ကိုစဉ်းစားရမယ်
+              Automation, CI/CD, monitoring ထည့်ရမယ်
+              Customer experience ကိုပိုကောင်းအောင်လုပ်ရမယ်
+              Budget နဲ့ timeline သတ်မှတ်ရမယ်
+              Success metrics သတ်မှတ်ရမယ်
+            အကျဉ်းချုပ်ဆိုရင် Digital Transformation က technology အသစ်ထည့်တာတင်မဟုတ်ဘဲ business process, people, systems, operations အားလုံးကို တိုးတက်အောင်ပြောင်းတာပါ။
+          Computing Power:
+            the throughput measured at wheich a computer can complete a computational task.
+            general computing: Xeon cpu processor
+            gpu computing: *50x faster than Traditional cpus
+            quantum computing: D-wave 2000Q, 100 million times faster.
+            aws service offerting:
+              ec2, aws Inf1,
+            MM Note:
+              Computing Power ဆိုတာ computer တစ်လုံးက computational task တစ်ခုကို ဘယ်လောက်မြန်မြန်ပြီးစီးနိုင်လဲဆိုတဲ့ processing ability ကိုဆိုလိုပါတယ်။
+              General computing က normal CPU ကိုသုံးတဲ့ processing ဖြစ်ပါတယ်
+              GPU computing က parallel processing အများကြီးလိုတဲ့ workloads တွေအတွက် သုံးပါတယ်
+              GPU က CPU ထက် parallel tasks တွေမှာ အများကြီးမြန်ပါတယ်။ တချို့ workloads တွေမှာ CPU ထက် 10x မှ 50x လောက်ပိုမြန်နိုင်ပါတယ်။
+              Quantum computer တွေက specific problem တချို့မှာ traditional computers ထက် အလွန်မြန်နိုင်ပါတယ်
+          amazon braket:
+            AWS ရဲ့ fully managed quantum computing service
+          Benefites of Cloud:
+            agility:
+              increase speed and agility
+              Cloud သုံးရင် server setup, database create, deployment လုပ်တာတွေကို မြန်မြန်လုပ်နိုင်တယ်။ Infrastructure တည်ဆောက်ဖို့ ရက်အတော်ကြာစောင့်စရာမလိုဘဲ minutes အတွင်း create လုပ်နိုင်တယ်။
+            pay-as-yo-go pricing:
+              trade capital expense for variable expense
+              ကိုယ်သုံးသလောက်ပဲ ပိုက်ဆံပေးရတယ်။ Hardware ကြိုဝယ်ဖို့မလိုဘူး။ Capital expense အစား variable expense ဖြစ်သွားတယ်။
+            economy of scale:
+              benefit from massive economies of scale
+              Cloud provider တွေက server အများကြီးဝယ်ပြီး အသုံးပြုတဲ့အတွက် cost သက်သာတယ်။ User တစ်ယောက်တည်း server ဝယ်တာထက် ပိုသက်သာတယ်။
+            global reach:
+              go blobal in minutes
+              Application ကို နိုင်ငံအများကြီးမှာ လွယ်လွယ် deploy လုပ်နိုင်တယ်။ ဥပမာ Amazon Web Services region အများကြီးမှာ service run လုပ်နိုင်တယ်။
+            security:
+            Cloud provider တွေမှာ encryption, firewall, IAM, monitoring, compliance tools တွေပါပြီးသားဖြစ်တယ်။ Small company တွေက ကိုယ်တိုင် data center တည်ဆောက်တာထက် security ပိုကောင်းနိုင်တယ်။
+            reliability: (cloud architecture)
+              stop spending money on running and maintainging data centers
+              Cloud provider တွေက infrastructure redundancy, backup, monitoring, failover တွေပါပြီးသားဖြစ်လို့ service မပြတ်တောက်ဖို့ ပိုကောင်းတယ်။ Company က data center run နေရတဲ့ cost နဲ့ maintenance ကိုလည်း လျှော့နိုင်တယ်။
+            high availability: (cloud architecture)
+              Application ကို server တစ်လုံးမဟုတ်ဘဲ server အများကြီးပေါ်မှာ run လုပ်နိုင်တယ်။ Server တစ်လုံးပျက်သွားရင်လည်း အခြား server ကဆက် run ပေးနိုင်တယ်။
+            scalability: (cloud architecture)
+              beefit from massive economies of scale
+              Scalability ဆိုတာ workload တိုးလာတဲ့အခါ resource ကို တိုးနိုင်တဲ့ ability ဖြစ်ပါတယ်။
+              Scalability မှာ resource တိုးတာက manual ဖြစ်နိုင်တယ်၊ long-term growth အတွက်ဖြစ်နိုင်တယ်။
+            elasticity: (cloud architecture)
+              Elasticity ဆိုတာ workload ပေါ်မူတည်ပြီး resource ကို auto တိုး၊ auto လျှော့ လုပ်နိုင်တာပါ။
+              Elasticity က short-term changes အတွက်ဖြစ်ပြီး auto scaling နဲ့ဆိုင်ပါတယ်။
+            [Missing]
+              Fault tolerance
+                System တစ်ခုမှာ component တစ်ခု fail ဖြစ်သွားရင်တောင် service တစ်ခုလုံးမပျက်အောင် design လုပ်ထားတာပါ။ ဥပမာ server တစ်လုံး down သွားရင် အခြား server ကအလုပ်ဆက်လုပ်ပေးတယ်။
+              disaster recovery
+                Major outage, fire, earthquake, data corruption လို problem ဖြစ်ရင် backup နဲ့ recovery plan ရှိလို့ system ကို မြန်မြန်ပြန်တင်နိုင်တယ်။ Multi-region backup နဲ့ failover setup တွေကိုလည်း cloud မှာလွယ်လွယ်လုပ်နိုင်တယ်။
+          Six Advantages of Cloud:(aws original description of cloud benefits)
+            1. Trade Capital Expense for Variable Expense
+            အရင်လို server, storage, network equipment တွေကို upfront cost နဲ့ကြိုဝယ်စရာမလိုဘူး။ Cloud မှာတော့ Pay-as-you-go ဖြစ်လို့ သုံးသလောက်ပဲ ပိုက်ဆံပေးရတယ်။
+            2. Benefit from Massive Economies of Scale
+            Cloud provider တွေက customer အများကြီး share သုံးတာကြောင့် cost သက်သာတယ်။ ကိုယ်တိုင် server ဝယ်တာထက် unit cost ပိုနည်းတယ်။
+            3. Stop Guessing Capacity
+            Traffic ဘယ်လောက်လာမယ်ဆိုတာကြိုမှန်းဖို့မလိုဘူး။ လိုအပ်ရင် scale up လုပ်နိုင်တယ်၊ traffic ကျရင် scale down လုပ်နိုင်တယ်။
+            4. Increase Speed and Agility
+            Server, database, storage တွေကို minutes အတွင်း create လုပ်နိုင်တယ်။ Hardware order လုပ်ပြီး ရက်အတော်ကြာစောင့်စရာမလိုဘူး။
+            5. Stop Spending Money on Running and Maintaining Data Centers
+            Company က power, cooling, rack, hardware maintenance, security, networking စတာတွေကို ကိုယ်တိုင်မလုပ်တော့ဘူး။ အဲ့အစား customer နဲ့ business growth ကိုပို focus လုပ်နိုင်တယ်။
+            6. Go Global in Minutes
+            Application ကို region အများကြီးမှာ လွယ်လွယ် deploy လုပ်နိုင်တယ်။ ဥပမာ Amazon Web Services မှာ multiple regions ရှိလို့ Japan, Singapore, US, Europe စတဲ့နေရာတွေမှာ app ကို run လုပ်နိုင်တယ်။
+        AWS Global Infrastructure:
+          Amazon Web Services မှာ application တွေက ကမ္ဘာတစ်ဝှမ်းမှာရှိတဲ့ physical data centers တွေပေါ်မှာ run လုပ်ပါတယ်။
+          ဒီ infrastructure ကိုနားလည်ထားရင် -
+            Reliable ဖြစ်တဲ့ system တည်ဆောက်နိုင်တယ်
+            Performance ကောင်းတဲ့ application design လုပ်နိုင်တယ်
+            Disaster recovery နဲ့ high availability ပိုကောင်းအောင်လုပ်နိုင်တယ်
+            AWS Global Infrastructure မှာ အဓိကအားဖြင့် -
+              Region
+              Availability Zone
+              Edge Location
+              Local Zone
+
+              ဆိုပြီး organization လုပ်ထားပါတယ်။
+
+              Region ဆိုတာ geographical area တစ်ခုပါ။
+              ဥပမာ Tokyo Region, Singapore Region
+
+              Region တစ်ခုချင်းစီမှာ data center အများကြီးပါဝင်ပါတယ်။
+
+              Availability Zone (AZ) ဆိုတာ Region တစ်ခုအတွင်းက independent data center group တစ်ခုဖြစ်ပါတယ်။
+
+              ဥပမာ Region တစ်ခုမှာ AZ 3 ခုရှိနိုင်တယ်။ Application ကို multiple AZ မှာ run လုပ်ထားရင် data center တစ်ခု down သွားရင်တောင် service မပြတ်နိုင်ဘူး။
+
+              Edge Location ဆိုတာ content delivery နဲ့ caching အတွက် user နီးနားမှာထားတဲ့ location တွေပါ။
+
+              ဥပမာ Amazon CloudFront က Edge Location တွေကိုသုံးပြီး website, image, video တွေကို user နီးနားကနေ မြန်မြန်ပို့ပေးတယ်။
+
+              Local Zone ဆိုတာ specific city တစ်ခုနီးနားမှာ low-latency service ပေးဖို့ region extension လုပ်ထားတာပါ။
+
+              AWS မှာ compute, storage, database, AI, networking, analytics စတဲ့ service category အမျိုးမျိုးရှိပါတယ်။
+
+              Security ပိုင်းမှာတော့ AWS က physical infrastructure security ကိုတာဝန်ယူပြီး customer က application, data, access control, configuration security ကိုတာဝန်ယူရပါတယ်။ ဒါကို Shared Responsibility Model လို့ခေါ်ပါတယ်။
+        EC2:
+          Instances types:
+            General Purpose
+              Compute, memory, networking ကို balance ဖြစ်အောင်ပေးထားတဲ့ instance type ဖြစ်ပါတယ်။
+              Requirement မသေချာသေးတဲ့ workload တွေ၊ normal application တွေအတွက်သင့်တော်တယ်။
+              Use cases:
+                Web servers
+                Code repositories
+                Application servers
+                Small / medium databases
+              ဥပမာ instance family:
+                T3
+                T4g
+                M7i
+            Compute Optimized
+              CPU performance မြင့်တဲ့ instance type ဖြစ်ပါတယ်။
+              Heavy computation လိုတဲ့ workload တွေအတွက်သင့်တော်တယ်။
+              Use cases:
+                Gaming servers
+                High-performance computing
+                Scientific modeling
+                Video encoding
+                Batch processing
+              ဥပမာ instance family:
+                C7i
+                C6g
+            Memory Optimized
+              RAM အများကြီးပေးထားတဲ့ instance type ဖြစ်ပါတယ်။
+              Data အများကြီးကို memory ထဲမှာ process လုပ်ရတဲ့ workload တွေအတွက်သင့်တော်တယ်။
+              Use cases:
+                Real-time analytics
+                High-performance databases
+                In-memory caching
+                Large SAP systems
+              ဥပမာ instance family:
+                R7i
+                X2idn
+            Accelerated Computing
+              GPU သို့မဟုတ် hardware accelerator ပါတဲ့ instance type ဖြစ်ပါတယ်။
+              Parallel processing လိုတဲ့ workload တွေအတွက်သင့်တော်တယ်။
+              Use cases:
+                Graphics rendering
+                Machine learning
+                AI training
+                Floating-point calculations
+                Video processing
+              ဥပမာ instance family:
+                P5
+                G6
+                Inf2
+            Storage Optimized
+            Local storage performance မြင့်တဲ့ instance type ဖြစ်ပါတယ်။
+            Large dataset တွေကို read/write မြန်မြန်လုပ်ရတဲ့ workload တွေအတွက်သင့်တော်တယ်။
+            Use cases:
+              Data warehouses
+              Distributed file systems
+              Online transaction processing
+              Big data systems
+            ဥပမာ instance family:
+              I4i
+              D3
+          Pricing:
+            Pay-as-you-go modelသုံးပါတယ်။ ကိုယ်သုံးတဲ့ compute time အတွက်ပဲ ပိုက်ဆံပေးရ
+            Options:
+            On-Demand Instances
+              Upfront cost မလိုဘူး။ Hourly သို့မဟုတ် per-second billing ဖြစ်တယ်။
+              Short-term, unpredictable workload တွေအတွက်သင့်တော်တယ်။
+              ဥပမာ -
+                Development server
+                Temporary testing
+                Small project
+                Unknown traffic website
+              Instance ကို stop မလုပ်မချင်း run နေပြီး billing ဆက်ဖြစ်နေမယ်။
+            Savings Plans
+              1 year သို့မဟုတ် 3 years usage commitment ပေးပြီး discount ရယူတာပါ။
+              ဥပမာ company က compute usage တစ်လကို $500 သေချာသုံးမယ်ဆိုရင် Savings Plan ဝယ်ထားလို့ရတယ်။
+              Commitment ထက်ပိုသုံးတာတွေကိုတော့ On-Demand rate နဲ့ billing လုပ်မယ်။
+              3 years plan က 1 year ထက်ပိုသက်သာတယ်။
+            Reserved Instances
+              1 year သို့မဟုတ် 3 years အတွက် instance capacity reserve လုပ်ပြီး discount ရယူတာပါ။
+              Savings Plans နဲ့ဆင်တူပေမယ့် specific instance family, region, OS တွေနဲ့ပိုချိတ်ထားတယ်။
+              3 years Reserved Instance က discount အများဆုံးရတယ်။
+              အချို့ Reserved Instance တွေမှာ same instance family အတွင်း size ပြောင်းတာ၊ Availability Zone ပြောင်းတာမျိုး flexibility ရှိတယ်။
+            Spot Instances
+              AWS spare capacity ကိုသုံးတာဖြစ်ပြီး On-Demand ထက် 90% လောက်သက်သာနိုင်တယ်။
+              ဒါပေမယ့် AWS က capacity ပြန်လိုလာရင် instance ကို interrupt လုပ်နိုင်တယ်။
+              Flexible workload တွေအတွက်သင့်တော်တယ်။
+              ဥပမာ -
+                Batch processing
+                Video rendering
+                Testing
+            Dedicated Hosts
+              Physical server တစ်လုံးကို ကိုယ်တစ်ယောက်တည်းသီးသန့်သုံးတာပါ။
+              အရမ်းစျေးကြီးပေမယ့် existing software license တွေသုံးနိုင်တယ်။
+            အကျဉ်းချုပ်ဆိုရင် -
+              Short-term = On-Demand
+              Long-term predictable = Savings Plans / Reserved Instances
+              Cheapest but interruptible = Spot Instances
+              Physical server dedicated = Dedicated Hosts
+          Scaling:
+            Scaling ဆိုတာ workload နဲ့ traffic ပေါ်မူတည်ပြီး resource ကိုတိုးခြင်း၊ လျှော့ခြင်းကို ဆိုလိုပါတယ်။
+              key note:
+                Traffic ဆိုတာ system ထဲကိုဝင်လာတဲ့ requests, users, data amount ကိုဆိုလို,
+                Workload ဆိုတာ system က process လုပ်ရတဲ့ actual work ကိုဆိုလို
+                  ဥပမာ user 1,000 ယောက် website ကြည့်တာက traffic များတယ်။
+                  ဒါပေမယ့် static page ပဲဆိုရင် workload မများနိုင်ဘူး။
+                  တစ်ဖက်မှာ user 10 ယောက်ပဲရှိပေမယ့် video rendering လုပ်နေရင် traffic နည်းပေမယ့် workload အရမ်းများနိုင်တယ်။
+            ဒါကြောင့် application က performance ကောင်းနေပြီး unnecessary cost မဖြစ်ဘူး။
+            Vertical Scaling
+              Server တစ်လုံးရဲ့ CPU, RAM, Storage ကိုတိုးတာပါ။
+              ဥပမာ -
+                2 vCPU ကနေ 4 vCPU ပြောင်းတာ
+                8 GB RAM ကနေ 16 GB RAM ပြောင်းတာ
+
+              Small Instance→Larger Instance
+
+              Vertical scaling ကို scale up / scale down လို့လည်းခေါ်တယ်။
+              Database server တွေမှာ vertical scaling ကိုအများကြီးသုံးကြတယ်။
+            Horizontal Scaling
+              Server အသစ်တွေထပ်ထည့်တာပါ။
+              ဥပမာ -
+                Web server 1 လုံးကနေ 5 လုံးဖြစ်သွားတာ
+                Traffic များလာရင် EC2 instance အသစ်တွေ auto create လုပ်တာ
+
+              1 Server→5 Servers
+
+              Horizontal scaling ကို scale out / scale in လို့လည်းခေါ်တယ်။
+              Web applications တွေမှာ horizontal scaling ကိုပိုသုံးကြတယ်။
+              AWS မှာတော့ horizontal scaling အတွက် Amazon EC2 Auto Scaling နဲ့ Elastic Load Balancing ကိုသုံးကြတယ်။
+
+              Auto Scaling က traffic ပေါ်မူတည်ပြီး instance အသစ်တွေ create / remove လုပ်ပေးတယ်
+              Load Balancer က user requests တွေကို server အများကြီးဆီ distribute လုပ်ပေးတယ်
+            Note: Server တွေက request အရမ်းများလာရင် timeout, slow response, outage ဖြစ်နိုင်တယ်။ Auto Scaling က အဲ့ဒီ problem ကိုကာကွယ်ပေးတယ်
+            Dynamic Scaling
+              Dynamic scaling က real-time traffic change ကိုကြည့်ပြီး instance တိုး / လျှော့ လုပ်တာပါ။
+            Predictive Scaling
+              Predictive scaling က historical traffic pattern ကိုကြည့်ပြီး ကြိုတင် scale လုပ်တာပါ။
+              ဥပမာ -
+                Website က နေ့တိုင်း မနက် 9 နာရီမှာ traffic တက်တယ်
+                Auto Scaling က 8:50 မှာတင် instance အသစ်တွေကြိုဖွင့်ထားမယ်
+            Auto Scaling Group (ASG):
+              ASG မှာ capacity limit 3 မျိုးသတ်မှတ်တယ် -
+                Minimum = အနည်းဆုံး instance ဘယ်နှစ်လုံး run နေရမလဲ
+                Desired = Normal traffic အတွက် ideal instance count
+                Maximum = ဘယ်နှစ်လုံးထက်မပိုရဘူးဆိုတဲ့ limit
+                ဥပမာ -
+                  Minimum = 2
+                  Desired = 2
+                  Maximum = 10
+                  2≤Instances≤10
+
+                  ဒီ setup မှာ normal အချိန် 2 instances run မယ်။
+                  Traffic တက်လာရင် Auto Scaling က 3, 4, 5 instance ဖြစ်အောင်တိုးမယ်။
+                  အများဆုံး 10 instances ထိပဲတိုးနိုင်မယ်။
+            Summary:
+              Vertical Scaling = Server တစ်လုံးကို ပိုကြီးအောင်လုပ်တာ
+              Horizontal Scaling = Server အရေအတွက်တိုးတာ
+              Dynamic Scaling = Traffic တက်မှ auto တိုးတာ
+              Predictive Scaling = Traffic တက်မယ့်အချိန်ကို ကြိုတွက်ပြီး တိုးတာ
+        ELB:
+          incoming traffic တွေကို EC2 instances အများကြီးကြားမှာ distribute လုပ်ပေးတဲ့ service
+            Routing Methods:
+              Round Robin
+                Request တွေကို server တစ်လုံးပြီးတစ်လုံး အလှည့်ကျ distribute လုပ်တယ်။
+                ဥပမာ -
+                Request 1 → Server A
+                Request 2 → Server B
+                Request 3 → Server C
+                Request 4 → Server A
+              Least Connections
+                Active connection အနည်းဆုံးရှိတဲ့ server ကို request ပို့တယ်။
+                ဥပမာ server A မှာ 50 users ရှိပြီး server B မှာ 10 users ပဲရှိရင် request အသစ်ကို server B ဆီပို့မယ်။
+              IP Hash
+                Client IP ကိုကြည့်ပြီး user တစ်ယောက်ကို server တစ်လုံးတည်းဆီ consistent ပို့တယ်။
+                ဥပမာ user တစ်ယောက်က session data တူညီနေဖို့ server တစ်လုံးတည်းကိုပဲရောက်နေစေချင်တဲ့အခါ သုံးတယ်။
+              Least Response Time
+                Response အမြန်ဆုံးပေးနိုင်တဲ့ server ကို request ပို့တယ်။
+                ဥပမာ server A က 100ms နဲ့ပြန်တယ်၊ server B က 30ms နဲ့ပြန်တယ်ဆိုရင် request အသစ်ကို server B ဆီပို့မယ်။
+            What is the Elastic Load Balancing service a single point of contact for?
+              ans: Incoming web traffic
+        Messaging and Queuing:
+          
+
+
+
+
+          
+
           
           
 
