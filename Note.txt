@@ -424,6 +424,14 @@ aws:
             Company က power, cooling, rack, hardware maintenance, security, networking စတာတွေကို ကိုယ်တိုင်မလုပ်တော့ဘူး။ အဲ့အစား customer နဲ့ business growth ကိုပို focus လုပ်နိုင်တယ်။
             6. Go Global in Minutes
             Application ကို region အများကြီးမှာ လွယ်လွယ် deploy လုပ်နိုင်တယ်။ ဥပမာ Amazon Web Services မှာ multiple regions ရှိလို့ Japan, Singapore, US, Europe စတဲ့နေရာတွေမှာ app ကို run လုပ်နိုင်တယ်။
+          Seven Advantages to Cloud:
+            cost-effective: pay for what you consume, no up-front cost.
+            global: launch workloads anywhere.
+            secure: can be secure by default.
+            reliable: data backup, diasaster recovery.
+            scalable: increase or decreast resources.
+            elastic: automate scaling during spikes.
+            current: the underlying hardware/software is upgraded and replaced by csp without interrupt to you.
         AWS Global Infrastructure:
           Amazon Web Services မှာ application တွေက ကမ္ဘာတစ်ဝှမ်းမှာရှိတဲ့ physical data centers တွေပေါ်မှာ run လုပ်ပါတယ်။
           ဒီ infrastructure ကိုနားလည်ထားရင် -
@@ -431,19 +439,22 @@ aws:
             Performance ကောင်းတဲ့ application design လုပ်နိုင်တယ်
             Disaster recovery နဲ့ high availability ပိုကောင်းအောင်လုပ်နိုင်တယ်
             AWS Global Infrastructure မှာ အဓိကအားဖြင့် -
-              Region
-              Availability Zone
-              Edge Location
-              Local Zone
-
+                Region: 39
+                Availability Zone: 123
+                Direct Connection Locations
+                Edge Location: 750+
+                Local Zone
+                Wavelength Zones: 43
               ဆိုပြီး organization လုပ်ထားပါတယ်။
 
-              Region ဆိုတာ geographical area တစ်ခုပါ။
+              Region ဆိုတာ geographical area တစ်ခုပါ။ every region is physical isolated. independent of other.
               ဥပမာ Tokyo Region, Singapore Region
 
-              Region တစ်ခုချင်းစီမှာ data center အများကြီးပါဝင်ပါတယ်။
+              Region တစ်ခုချင်းစီမှာ data center အများကြီးပါဝင်ပါတယ်။ datacenter within a region, isolate from each other(different buildings), low-latency(<10ms)
 
               Availability Zone (AZ) ဆိုတာ Region တစ်ခုအတွင်းက independent data center group တစ်ခုဖြစ်ပါတယ်။
+              AZs are represented by a Region Code, followed by a letter identifier eg. us-east-1<a>
+              a subnet is associated with AZ. we never choose AZ, we choose subnet.
 
               ဥပမာ Region တစ်ခုမှာ AZ 3 ခုရှိနိုင်တယ်။ Application ကို multiple AZ မှာ run လုပ်ထားရင် data center တစ်ခု down သွားရင်တောင် service မပြတ်နိုင်ဘူး။
 
@@ -454,8 +465,294 @@ aws:
               Local Zone ဆိုတာ specific city တစ်ခုနီးနားမှာ low-latency service ပေးဖို့ region extension လုပ်ထားတာပါ။
 
               AWS မှာ compute, storage, database, AI, networking, analytics စတဲ့ service category အမျိုးမျိုးရှိပါတယ်။
+              Security ပိုင်းမှာတော့ AWS က physical infrastructure security ကိုတာဝန်ယူပြီး customer က application, data, access control, configuration security ကိုတာဝန်ယူရပါတယ်။
+              ဒါကို Shared Responsibility Model လို့ခေါ်ပါတယ်။
+              AWS Wavelength:
+                AWS Wavelength က 5G network edge မှာ application run လုပ်နိုင်အောင်လုပ်ပေးတဲ့ service ဖြစ်ပါတယ်။
+                Application ကို user နီးနား telecom network အတွင်းမှာထားပေးတာကြောင့် ultra-low latency ရနိုင်တယ်။
+                AWS က telecom companies တွေနဲ့ partnership လုပ်ထားတယ်။
+              FedRAMP:
+                US government cloud security standard program:
+                  AWS GovCloud ဆိုတာ US government နဲ့ regulated industries တွေအတွက် AWS ရဲ့ isolated region ဖြစ်ပါတယ်။
+                  GovCloud Region ကို sensitive data နဲ့ regulated workloads တွေအတွက်သုံးတယ်။
+              AWS Sustainability Goals:
+                Climate Pledge ကို co-found လုပ်ခဲ့ပြီး 2040 အတွင်း Net-Zero Carbon Emissions ရအောင်လုပ်ဖို့ရည်ရွယ်ထားပါတယ်။
+                Renewable Energy
+                  Amazon Web Services က 2025 အတွင်း AWS Global Infrastructure အားလုံးကို 100% renewable energy နဲ့ run ဖို့ကြိုးစားနေတယ်။
 
-              Security ပိုင်းမှာတော့ AWS က physical infrastructure security ကိုတာဝန်ယူပြီး customer က application, data, access control, configuration security ကိုတာဝန်ယူရပါတယ်။ ဒါကို Shared Responsibility Model လို့ခေါ်ပါတယ်။
+                  Renewable energy ဆိုတာ -
+
+                  Solar
+                  Wind
+                  Hydro power
+
+                  လို clean energy sources တွေကိုဆိုလိုတာပါ။
+                  AWS က renewable energy မလုံလောက်တဲ့နေရာတွေမှာ environmental credits တွေဝယ်ပြီး compensate လုပ်တယ်။
+                Cloud Efficiency
+                  AWS infrastructure က traditional enterprise data center တွေထက် energy efficiency ပိုကောင်းတယ်။
+
+                  AWS data centers တွေက shared infrastructure ဖြစ်လို့ server utilization ပိုမြင့်တယ်။
+                  Water Stewardship
+                  AWS data center cooling အတွက် water usage ကို optimize လုပ်တယ်။
+                  ဥပမာ -
+                  Evaporative cooling technology သုံးတယ်
+              AWS Ground Station:
+                AWS Ground Station က satellite communication ကို AWS cloud ကနေ manage လုပ်နိုင်တဲ့ fully managed service ဖြစ်ပါတယ်။
+                Company က ကိုယ်ပိုင် ground station infrastructure, antennas, hardware တွေတည်ဆောက်စရာမလိုဘဲ satellite နဲ့ communicate လုပ်နိုင်တယ်။
+                Use cases:
+                  Weather forecasting
+                  Surface imaging
+                  Communications
+                  Video broadcasting
+                  Satellite data collection
+                  Remote sensing
+
+                  AWS Ground Station သုံးတဲ့ flow က -
+
+                  Satellite တစ်ခုရွေးမယ်
+                  Contact time သတ်မှတ်မယ်
+                  Ground station location ရွေးမယ်
+                  EC2 instance launch လုပ်မယ်
+                  Satellite နဲ့ uplink / downlink data exchange လုပ်မယ်
+                  Download လုပ်ထားတဲ့ data ကို Amazon S3 ထဲမှာသိမ်းမယ်
+
+                  ဥပမာ -
+
+                  Company တစ်ခုက satellite imagery provider နဲ့ agreement လုပ်ထားတယ်။
+
+                  Satellite က specific region တစ်ခုရဲ့ photo ရိုက်ပေးမယ်။
+
+                  ပြီးရင် AWS Ground Station က satellite နဲ့ communicate လုပ်ပြီး image data ကို download လုပ်မယ်။
+
+                  Download လုပ်ထားတဲ့ image ကို S3 ထဲမှာသိမ်းပြီး analysis ဆက်လုပ်နိုင်တယ်။
+                AWS Outposts:
+                  AWS Outposts က AWS infrastructure ကို company ရဲ့ own datacenter, office, co-location space, on-premises facility ထဲမှာတင် run လို့ရအောင်လုပ်ပေးတဲ့ service ဖြစ်ပါတယ်။
+                  AWS region ထဲမှာ run သလိုပဲ same AWS services, APIs, tools တွေကို on-premises မှာသုံးနိုင်တယ်။
+                  ဒါကြောင့် hybrid cloud environment တည်ဆောက်ချင်တဲ့ company တွေအတွက်သင့်တော်တယ်။
+                  Server Rack ဆိုတာဘာလဲ
+                    Server rack ဆိုတာ IT equipment တွေကို organize လုပ်ပြီးထားတဲ့ metal frame cabinet ဖြစ်ပါတယ်။
+                    Rack height ကို U (Rack Unit) နဲ့တိုင်းတယ်။
+                    1U=1.75 inches
+
+                    Industry standard rack size က 48U ဖြစ်ပြီး full-size rack cage တစ်ခုက 42U လောက်ရှိတတ်တယ်။
+                    Equipment တစ်ခုချင်းစီက -
+                    1U
+                    2U
+                    3U
+                    4U
+                    ဆိုပြီး size ကွာနိုင်တယ်။
+                Solutions Architect:
+                  Solutions Architect ဆိုတာ business requirement တွေအတွက် technical solution တည်ဆောက်ပေးတဲ့ role ဖြစ်ပါတယ်။
+                  သူတို့က systems အမျိုးမျိုးကိုပေါင်းပြီး best solution design လုပ်တယ်။
+                  အဓိကအလုပ်တွေက -
+                    Research လုပ်တယ်
+                    Documentation ရေးတယ်
+                    Different services compare လုပ်တယ်
+                    Testing / experimentation လုပ်တယ်
+                    System architecture design လုပ်တယ်
+                Cloud Architect:
+                  Cloud Architect ဆိုတာ cloud services ကိုအဓိကသုံးပြီး solution design လုပ်တဲ့ Solutions Architect ဖြစ်ပါတယ်။
+
+                  ဥပမာ Amazon Web Services, Microsoft Azure, Google Cloud Platform services တွေကိုသုံးပြီး architecture design လုပ်တယ်။
+
+                  Cloud Architect တစ်ယောက်က architecture design လုပ်တဲ့အခါ ဒီအချက်တွေကိုစဉ်းစားရတယ် -
+
+                  Availability = Service အမြဲ available ဖြစ်နေရမယ်
+                  Scalability = Traffic တက်လာရင် grow လုပ်နိုင်ရမယ်
+                  Elasticity = Usage အလိုက် auto grow / shrink လုပ်နိုင်ရမယ်
+                  Fault Tolerance = Failure ဖြစ်ရင် service မပြတ်ရဘူး
+                  Disaster Recovery = Failure ဖြစ်ပြီးရင် ပြန် recover လုပ်နိုင်ရမယ်
+
+                  ဥပမာ -
+                    Multiple AZ သုံးမလား
+                    Auto Scaling သုံးမလား
+                    Backup ထည့်မလား
+                    Load Balancer သုံးမလား
+                    Region replication လုပ်မလား
+                  စတာတွေကို architecture ထဲမှာစဉ်းစားရတယ်။
+
+                  Solutions Architect တစ်ယောက်က technical factor တွေအပြင် business factor တွေကိုလည်းအမြဲစဉ်းစားရတယ်။
+
+                  အဓိက business factor ၂ ခုက -
+
+                  Security = Solution က လုံခြုံလား
+                  Cost = ဒီ solution က ဘယ်လောက်ကုန်မလဲ
+
+                  Best architecture ဆိုတာ technically ကောင်းတာတင်မဟုတ်ဘဲ secure ဖြစ်ရမယ်၊ business budget နဲ့လည်းကိုက်ညီရမယ်။
+
+              High Availability (HA):
+                High Availability ဆိုတာ service မပြတ်တောက်အောင် design လုပ်ထားတာပါ။
+                အဓိက idea က single point of failure မရှိရဘူး။
+                Single point of failure ဆိုတာ component တစ်ခုတည်းပျက်ရင် system တစ်ခုလုံး down သွားနိုင်တဲ့နေရာပါ။
+                ဥပမာ -
+                  Server တစ်လုံးတည်းရှိတယ်
+                  Database တစ်လုံးတည်းရှိတယ်
+                  Availability Zone တစ်ခုတည်းသုံးတယ်
+                ဒီလိုဆိုရင် အဲ့ဒီ component ပျက်သွားတာနဲ့ application တစ်ခုလုံး down သွားနိုင်တယ်။
+
+                Elastic Load Balancing ကိုသုံးရင် traffic ကို server အများကြီးကြား evenly distribute လုပ်နိုင်တယ်။
+
+                ဥပမာ -
+                Server A
+                Server B
+                Server C
+                ရှိတယ်ဆိုရင် user requests တွေကို ELB က server ၃ လုံးဆီခွဲပို့ပေးမယ်။
+
+                Server B ပျက်သွားရင် ELB က Server A နဲ့ C ဆီပဲ traffic ပို့မယ်။
+
+                3 Servers→2 Healthy Servers
+
+                ဒါကြောင့် service မပြတ်ဘူး။
+
+                နောက်တစ်ခုက multiple Availability Zone တွေသုံးတာပါ။
+                ဥပမာ application ကို AZ-A နဲ့ AZ-B နှစ်ခုလုံးမှာ run ထားတယ်ဆိုရင် -
+                  AZ-A down သွားရင်
+                  AZ-B က service ဆက် run နိုင်တယ်
+
+                ဒါကြောင့် High Availability ရဖို့အတွက် -
+                  Multiple servers
+                  Load balancer
+                  Multiple Availability Zones
+                  Auto Scaling
+                  Backup systems
+                တွေကိုအတူသုံးကြတယ်။
+              Note:
+                new services are limited to two eg.US-West.
+                not all aws services are available in all regions.
+                all your billing information appears in US-EAST-1
+                cost of aws services are very per region.
+              when you choose a region, four factors need to consider:
+                what regulatory compliance does this region meet?
+                  ကိုယ့် company သို့မဟုတ် customer data တွေကို ဘယ်နိုင်ငံမှာထားရမလဲဆိုတဲ့ rule တွေရှိနိုင်တယ်။
+                  ဥပမာ -
+                  Japan data ကို Japan ထဲမှာပဲထားရမယ်
+                  Europe user data ကို GDPR rule နဲ့ကိုက်ညီရမယ်
+                what is the cost of aws services in this region?
+                what aws services are available in this region?
+                what is the distance or latency to my end-users?
+            Fault tolerance:
+              Fault domain?
+                a section of network that is vulnerable to damage if a critical device or system fails. 
+                the purpose of fault domain is that if a failure occurs it will not cascade outside that domain, limiting the damage possible.
+                MM Note:
+                  Fault Domain ဆိုတာ system တစ်ခုထဲမှာ failure ဖြစ်နိုင်တဲ့ area သို့မဟုတ် group တစ်ခုကို ဆိုလိုပါတယ်။
+                  ဥပမာ -
+                    Server rack တစ်ခု
+                    Network switch တစ်ခု
+                    Power supply တစ်ခု
+                    Data center တစ်ခု
+                    Availability Zone တစ်ခု
+                  ဒီ area ထဲက critical component တစ်ခု fail ဖြစ်သွားရင် အဲ့ဒီ area ထဲမှာရှိတဲ့ systems တွေကိုပဲထိခိုက်မယ်။
+                  Fault domain ရဲ့ အဓိကရည်ရွယ်ချက်က failure တစ်ခုဖြစ်လာရင် system တစ်ခုလုံးကို မထိခိုက်စေဘဲ damage ကို domain တစ်ခုထဲမှာပဲ ကန့်သတ်ထားဖို့ပါ။
+                  ဥပမာ -
+                  Server 10 လုံးကို rack တစ်ခုတည်းမှာထားရင် rack power fail ဖြစ်ရင် server 10 လုံးလုံး down သွားနိုင်တယ်
+                  Server 10 လုံးကို rack 2 ခုခွဲထားရင် rack တစ်ခု fail ဖြစ်ရင် အခြား rack ကဆက် run နိုင်တယ်
+
+                  AWS မှာတော့ fault domain ကိုခွဲဖို့ multiple Availability Zone တွေသုံးကြတယ်။
+                  ဥပမာ app server ကို AZ-A မှာထားပြီး database replica ကို AZ-B မှာထားရင် AZ-A failure ဖြစ်ရင်တောင် system တစ်ခုလုံးမပျက်နိုင်ဘူး။
+                  Fault domain နည်းနည်းလေးတွေခွဲထားလေလေ fault tolerance ပိုကောင်းလေလေ ဖြစ်
+              Fault level:
+                a collection of fault domains.
+                scope could be
+                  specific servers in a rack
+                  an entire rack in a datacenter
+                  an entire room ia a datacenter
+                  the entire data center building
+                its up to the CSPs to define the boundaries of a domain.
+                MM Note:
+                  Fault Level ဆိုတာ fault domain အများကြီးပေါင်းထားတဲ့ larger failure scope ကိုဆိုလိုပါတယ်။
+
+                  Fault Domain က failure ဖြစ်နိုင်တဲ့ area တစ်ခုဆိုရင် Fault Level က failure ဘယ်လောက်ကြီးမားတဲ့အထိထိခိုက်နိုင်လဲဆိုတဲ့ level ဖြစ်ပါတယ်။
+
+                  ဥပမာ failure scope က -
+
+                  Rack တစ်ခုထဲက specific servers
+                  Data center ထဲက rack တစ်ခုလုံး
+                  Data center ထဲက room တစ်ခန်းလုံး
+                  Data center building တစ်ခုလုံး
+                  Availability Zone တစ်ခုလုံး
+                  Region တစ်ခုလုံး
+
+                  ဥပမာ power failure တစ်ခုက rack တစ်ခုကိုပဲထိခိုက်ရင် fault level နိမ့်တယ်။
+
+                  ဒါပေမယ့် cooling system ပျက်ပြီး data center တစ်ခုလုံး down သွားရင် fault level ပိုမြင့်တယ်။
+
+                  Amazon Web Services လို CSP တွေက fault domain နဲ့ fault level boundary တွေကို define လုပ်ထားတယ်။
+
+                  ဥပမာ -
+
+                  Different racks
+                  Different rooms
+                  Different Availability Zones
+                  Different Regions
+
+                  ဆိုပြီး infrastructure ကိုခွဲထားတယ်။
+
+                  ဒီလိုခွဲထားတာကြောင့် fault တစ်ခုဖြစ်လာရင် system တစ်ခုလုံးကို cascade မဖြစ်စေဘဲ impact ကိုကန့်သတ်နိုင်တယ်။
+                  Region တစ်ခုမှာ major failure ဖြစ်ရင် အခြား Region တွေကို မထိခိုက်စေဘူး။
+                  AZ တစ်ခု down သွားရင် အခြား AZ တွေကို မထိခိုက်စေဖို့ design လုပ်ထားတယ်။
+              Failover
+                Failover ဆိုတာ primary system fail ဖြစ်သွားရင် traffic ကို secondary system ဆီပြောင်းပေးတာပါ
+                Primary database ပျက်သွားရင် secondary database က primary အဖြစ်ပြောင်းပြီး service ဆက် run နိုင်တယ်။
+                ဒါကြောင့် user တွေအတွက် downtime နည်းသွားတယ်။
+                Fault Tolerance ရဖို့အတွက် အများအားဖြင့် -
+                  Redundant servers
+                    Redundant servers ဆိုတာ server တစ်လုံးပျက်သွားရင် အစားထိုး run ပေးဖို့ server အပိုတွေထားထားတာပါ။
+                      ဥပမာ -
+                        Server A
+                        Server B
+                      Server A က main server ဖြစ်ပြီး Server B က backup / standby server ဖြစ်နိုင်တယ်။
+                      Server A ပျက်သွားရင် Server B က ဆက် run ပေးမယ်။
+                  Replicated databases
+                    Replicated databases ဆိုတာ database တစ်ခုရဲ့ data ကို အခြား database တစ်ခုဆီ copy / sync လုပ်ထားတာပါ။
+                    ဥပမာ -
+                      Primary Database
+                      Secondary Database
+                    Primary database မှာ data update ဖြစ်တိုင်း secondary database ကို sync လုပ်ပေးတယ်။
+                    Primary database ပျက်သွားရင် secondary database ကိုသုံးပြီး service ဆက် run နိုင်တယ်။
+                  Multiple Availability Zones
+                  Load balancers
+                  Automatic failover
+                တွေကိုအသုံးပြုကြတယ်။
+            Disaster Recovery (DR):
+              Disaster Recovery ဆိုတာ disaster, outage, hardware failure, data corruption ဖြစ်သွားတဲ့အခါ system နဲ့ data ကိုပြန် restore လုပ်နိုင်စွမ်းကိုဆိုလိုပါတယ်။
+              အဓိက goal က -
+                Data မပျောက်ရဘူး
+                Service ကိုမြန်မြန်ပြန်တင်နိုင်ရမယ်
+                Downtime နည်းရမယ်
+              DR plan လုပ်တဲ့အခါ ဒီမေးခွန်းတွေစဉ်းစားရတယ် -
+                Backup ရှိလား
+                Backup restore ဘယ်လောက်မြန်လဲ
+                Backup က တကယ် restore လုပ်လို့ရလား
+                Live data corrupt မဖြစ်အောင်ဘယ်လိုကာကွယ်ထားလဲ
+              global network:
+                backbone of aws, interconnnections between aws global infrastructure.
+              Points of Presence (PoP):
+                AWS Region နဲ့ end user ကြားထဲမှာရှိတဲ့ intermediate location:
+                  အဓိက ၂ မျိုးရှိတယ် -
+                    Edge Locations:
+                      Edge Location ဆိုတာ user နီးနားမှာရှိတဲ့ data center ဖြစ်ပြီး popular content တွေကို cache လုပ်ထားတယ်။
+                    Regional Edge Caches
+                      Edge Location ထက်ပိုကြီးတဲ့ cache storage ဖြစ်တယ်။
+                      Less-popular files တွေကိုသိမ်းထားတယ်။
+                use for content delivery or expediated upload.
+                  Amazon CloudFront :
+                    Amazon CloudFront က CDN (Content Delivery Network) service ဖြစ်ပါတယ်။
+                    Website ကို CloudFront နဲ့ချိတ်ထားရင် user request ကို nearest Edge Location ဆီပို့ပေးတယ်။
+                    CloudFront မှာ origin တစ်ခုရွေးရတယ်။
+                    CloudFront က origin က file ကိုယူပြီး Edge Location တွေမှာ cache လုပ်ထားပေးတ
+                  Amazon S3 Transfer Acceleration:
+                    Amazon S3 Transfer Acceleration က file upload ပိုမြန်အောင်လုပ်ပေးတဲ့ feature
+                    S3 Transfer Acceleration သုံးရင် special upload URL တစ်ခုရမယ်။
+                    User က file ကို nearest Edge Location ဆီ upload လုပ်မယ်။
+                  AWS Global Accelerator:
+                    AWS Global Accelerator: can find the optimal path from the end user to your web-servers. Global
+                    Accelerator are deployed within Edge Locations so you send user traffic to an Edge Location
+                    instead of directly to your web-application.
+                    Note: 
+                      user နဲ့ web application ကြားမှာ fastest network path ကိုရှာပေးတဲ့ service ဖြစ်
+                  AWS Direct Connect:
+                    AWS Direct Connect is a private/dedicated connection between your datacenter, office, co-location and AWS.
         EC2:
           Instances types:
             General Purpose
@@ -583,6 +880,8 @@ aws:
               1 Server→5 Servers
 
               Horizontal scaling ကို scale out / scale in လို့လည်းခေါ်တယ်။
+                scaling out: add more servers.
+                scaling in: remove underutilized server.
               Web applications တွေမှာ horizontal scaling ကိုပိုသုံးကြတယ်။
               AWS မှာတော့ horizontal scaling အတွက် Amazon EC2 Auto Scaling နဲ့ Elastic Load Balancing ကိုသုံးကြတယ်။
 
@@ -637,15 +936,323 @@ aws:
             What is the Elastic Load Balancing service a single point of contact for?
               ans: Incoming web traffic
         Messaging and Queuing:
-          
+          Application architecture:
+            two main approaches to connnecting components.
+            Monolithic:
+              tightly coupled, as a single unit.
+              if one fails, other can go down.
+            Microservices:
+              loosely coupled, communicate through messaging.
+              if one fails, other continue work.
+          AWS Messaging Services:
+            Amazon EventBridge:
+              Serverless event routing between apps, AWS services, and third-party software.
+            Amazon SNS:
+              Publish-subscribe service for sending messages to multiple subscribers
+            Amazon SQS:
+              Message queuing for reliable component communication.
+            Note:
+              Best Practice: Use EventBridge as your central event router, 
+              SNS for fan-out notifications, and SQS for reliable point-to-point messaging.
+        AWS Serverless:
+          You focus on code while AWS handles servers, scaling, and maintenance.
+          server infrastructure ကိုကိုယ်တိုင် manage မလုပ်ဘဲ application code ပဲရေးပြီး run လုပ်တာပါ။
+            EC2 vs Serverless:
+              EC2: You manage the server, install software, and handle updates
+              Serverless: You only write code, while AWS handles everything else.
+        AWS Lambda:
+          AWS Lambda is a serverless compute service that runs code in response to events. No servers to manage, automatic scaling, 
+          and you pay only for compute time used (down to the millisecond).
+          AWS Lambda က event ဖြစ်လာတဲ့အခါ code ကို automatically run ပေးတဲ့ serverless compute service ဖြစ်ပါတယ်။
+            Server create, OS install, patching, scaling တွေကို AWS က manage လုပ်ပေးတယ်။
+            Developer က code ပဲရေးရတယ်။
+            Lambda ရဲ့ အဓိက advantage က -
+              No servers to manage
+              Automatic scaling
+              Pay only when code runs
+              Millisecond-level billing
+              How Lambda Works
+            1. Upload Code
+            Code ကို Lambda function အဖြစ် upload လုပ်တယ်။
+            2. Set Triggers
+            ဘယ် event ဖြစ်လာရင် function run မလဲဆိုတာသတ်မှတ်တယ်။
+            ဥပမာ -
+              File upload to Amazon S3
+              HTTP request from API
+              Schedule time
+              Database update
+              Message queue event
+            3. Code Runs Automatically
+            Event ဖြစ်တာနဲ့ Lambda က function ကို run လုပ်ပေးတယ်။
+            Traffic များလာရင် Lambda က auto scale လုပ်တယ်။
+            4. Pay Only for Usage
+            Code run နေတဲ့အချိန်နဲ့ memory usage အတွက်ပဲ billing ဖြစ်တယ်။
+            Code မ run နေရင် almost no cost ဖြစ်တယ်။
+            ဥပမာ car တစ်စီးလိုပါပဲ။
+              ကားမမောင်းရင် fuel မကုန်ဘူး။
 
+              Lambda လည်း code မ run နေရင် cost မရှိသလောက်ပဲ။
+        AWS Containers:
+          Container:
+            Container ဆိုတာ application run ဖို့လိုတဲ့ code, library, dependency, settings တွေကို package တစ်ခုလိုထည့်ထားတာပါ။
+            Container တစ်ခုကို ဘယ် server မှာပဲ run run environment တူတူဖြစ်နေမယ်။
+            ဒါကြောင့် “my code works on my computer but not on production” ဆိုတဲ့ problem နည်းသွားတယ်။
+            Container တွေအများကြီးကို server တစ်လုံးတည်းပေါ်မှာ run လုပ်နိုင်တယ်။
+            Container တစ်ခုချင်းစီမှာ -
+              Own application
+              Own libraries
+              Own dependencies
+            ရှိတယ်။
+            ဒါပေမယ့် OS ကိုတော့ shared သုံးတယ်။
+            ဒါကြောင့် VM ထက် lighter ဖြစ်ပြီး resource ပိုသက်သာတယ်။
+          Deployment Consistency:
+            Container သုံးရင် development, testing, production environment အားလုံးတူတူဖြစ်တယ်။
+            ဥပမာ developer laptop မှာ run တဲ့ app ကို production server မှာလည်း environment တူတူနဲ့ run နိုင်တယ်။
+            ဒါကြောင့် deployment ပိုလွယ်တယ်၊ debugging လည်းပိုလွယ်တယ်။
+          Scaling with Orchestration:
+            Container ၁ ခု၊ ၂ ခုလောက်ဆို manually manage လုပ်လို့ရတယ်။
+            ဒါပေမယ့် container ရာချီလာရင် orchestration tool လိုလာတယ်။
+            Orchestration tool က -
+              Container deployment
+              Scaling
+              Health checks
+              Restart
+              Networking
+              Load balancing
+            တွေကို automatically manage လုပ်ပေးတယ်။
+          AWS Container Services:
+            Orchestration:
+              Amazon ECS
+              Amazon EKS
+              ဒီ services တွေက container တွေကို deploy, scale, manage လုပ်ပေးတယ်။
+            Registry:
+              Amazon ECR
+            Container image တွေကို store လုပ်ထားတဲ့ private registry ဖြစ်တယ်။
+            Compute:
+              AWS Fargate
+              Container run ဖို့ server manage မလုပ်ချင်ရင် Fargate ကိုသုံးတယ်။
+              Fargate က serverless container service ဖြစ်ပြီး AWS က underlying server ကို manage လုပ်ပေးတယ်။
+        Amazon ECS:
+          Amazon Container Service (ECS)
+          Amazon ECS က containerized applications တွေကို deploy, scale, manage လုပ်ပေးတဲ့ container orchestration service ဖြစ်ပါတယ်။
+          Launch Types
+            ECS with EC2: Full control over infrastructure for custom hardware or networking needs
+            ECS with Fargate: Serverless option - focus on code while AWS handles servers and scaling
+          Docker Support:
+            ECS က Docker ကို support လုပ်တယ်။
+            Docker ဆိုတာ application ကို container image အဖြစ် build, package, deploy လုပ်ပေးတဲ့ platform ဖြစ်ပါတယ်။
+        Amazon EKS:
+          Amazon EKS
+            Amazon EKS က Kubernetes ကို AWS ပေါ်မှာ managed service အဖြစ် run လို့ရအောင်လုပ်ပေးတဲ့ service ဖြစ်ပါတယ်။
+            Containerized applications တွေကို deploy, manage, scale လုပ်ဖို့ပိုလွယ်စေတယ်။
+          Kubernetes
+            Kubernetes က open-source container orchestration software ဖြစ်တယ်။
+            Container အများကြီး run နေတဲ့ environment မှာ Kubernetes က automatically -
+              Deploy လုပ်ပေးတယ်
+              Scale လုပ်ပေးတယ်
+              Failed container ကို restart လုပ်ပေးတယ်
+              Load balancing လုပ်ပေးတယ်
+              Networking manage လုပ်ပေးတယ်
+            Kubernetes က community ကြီးမားပြီး industry standard ဖြစ်တယ်။
+            AWS က EKS ကို latest Kubernetes features တွေနဲ့ update လုပ်ပေးတယ်။
+            EKS with EC2: 
+              Amazon EC2 ပေါ်မှာ Kubernetes nodes တွေ run တယ်။
+              ဒီ option က infrastructure ကိုပို control လုပ်ချင်တဲ့အခါသင့်တော်တယ်။
+            EKS with Fargate
+              AWS Fargate ကိုသုံးပြီး Kubernetes containers တွေ run တယ်။
+              ဒီ option မှာ server manage လုပ်စရာမလိုဘူး။
+        AWS Fargate:
+          a serverless compute engine for containers.
+          ontainer run ဖို့ server create, manage, patch, scale လုပ်စရာမလိုဘူး။
+          Developer က container image နဲ့ CPU / memory requirement ပဲသတ်မှတ်ရတယ်။
+          Note:
+            Fargate vs ECS / EKS:
+              Amazon ECS နဲ့ Amazon EKS က orchestration services ဖြစ်တယ်။
+              သူတို့က -
+                Deployment
+                Scaling
+                Networking
+                Health checks
+                Load balancing
+              တွေကို manage လုပ်တယ်။
+            Fargate ကတော့ actual container run မယ့် compute layer ဖြစ်တယ်။
+              အကျဉ်းချုပ်ဆိုရင် -
+              Amazon ECS = Container management system
+              Amazon EKS = Kubernetes-based container management system
+              AWS Fargate = Container run ပေးမယ့် serverless infrastructure
 
+              ECS / EKS က container ကိုဘယ်မှာ run မလဲ၊ ဘယ်လောက် scale မလဲ၊ failed container ကို restart လုပ်မလားဆိုတာ manage လုပ်တယ်။
+              Fargate ကတော့ container run ဖို့ compute resource ပေးတယ်။
+        Additional AWS Compute Services:
+          EC2, Lambda, Containers အပြင် use case အလိုက် specific compute services တွေလည်းရှိတယ်။
+          AWS Elastic Beanstalk:
+            web application deploy လုပ်ဖို့ fully managed service ဖြစ်တယ်။
+            Code upload လုပ်လိုက်ရုံနဲ့ AWS က -
+              Server setup
+              Auto Scaling
+              Load Balancer
+              Monitoring
+              Deployment
+            တွေကို automatically handle လုပ်ပေးတယ်။
+          AWS Batch
+            AWS Batch က batch jobs တွေကို run လုပ်ဖို့ fully managed service ဖြစ်တယ်။
+            Job requirement အလိုက် compute resources ကို automatically scale လုပ်ပေးတယ်။
+            Batch job ဆိုတာ immediate response မလိုတဲ့ long-running job တွေပါ။
+          Amazon Lightsail
+            Amazon Lightsail က beginner-friendly AWS service ဖြစ်တယ်။
+            Virtual server, storage, database တွေကို simple UI နဲ့ predictable monthly pricing နဲ့သုံးနိုင်တယ်။
+            EC2 ထက် configuration ပိုနည်းပြီး setup ပိုလွယ်တယ်။
+            Which AWS service is best for predictable monthly pricing and simple virtual servers?
+              A. Amazon EC2
+              B. Amazon Lightsail
+              C. AWS Lambda
+              D. AWS Batch
+              Correct ans: B.
+            Good for:
+              Small websites
+          AWS Outposts
+            AWS Outposts က AWS infrastructure ကို company datacenter ထဲမှာ run လို့ရအောင်လုပ်ပေးတဲ့ service ဖြစ်တယ်။
+            AWS services ကို on-premises မှာသုံးနိုင်တယ်။
+        Provisioning AWS Resources:
+          Provisioning ဆိုတာ AWS resources တွေကို create, setup, configure လုပ်တာကိုဆိုလိုပါတယ်။
+          အဓိကနည်းလမ်း ၃ မျိုး:
+          AWS Management Console
+            AWS Management Console က browser ကနေအသုံးပြုတဲ့ web-based UI ဖြစ်ပါတယ်။
+          AWS Command Line Interface (CLI)
+          AWS SDKs
+            AWS SDKs က programming language အလိုက် AWS API ကို access လုပ်ဖို့ libraries တွေဖြစ်ပါတယ်။
+            Application code ထဲကနေ AWS service တွေကို directly control လုပ်နိုင်တယ်။
+          Tools:
+            Manual provisioning လုပ်မယ်ဆိုရင် Console, CLI, SDK နဲ့ resource တစ်ခုချင်းစီ create လုပ်ရတယ်။
+            ဒါပေမယ့် AWS မှာ deployment နဲ့ provisioning ပိုလွယ်အောင် managed tools ၂ ခုရှိတယ်။
+            AWS Elastic Beanstalk
+              Elastic Beanstalk က code နဲ့ configuration ပဲပေးလိုက်ရင် AWS က infrastructure setup ကို automatically handle လုပ်ပေးတယ်။
+            AWS CloudFormation
+              define infrastructure in template files and deploy it automatically.
+              CloudFormation က infrastructure ကို code အဖြစ်ရေးပြီး create လုပ်တဲ့ service ဖြစ်တယ်။
+              Manual console ကနေ click click လုပ်မယ့်အစား template file ရေးပြီး environment တစ်ခုလုံးကို create လုပ်နိုင်တယ်။
+            အကျဉ်းချုပ်ဆိုရင် -
+              Elastic Beanstalk = Deploy application quickly
+              CloudFormation = Deploy infrastructure with code
+        Networking:
+          Networking refers to interconnected devices that exchange data and resources.
+          The main building blocks are:
+            Amazon VPC (Virtual Private Cloud): 
+              A logically isolated section of AWS where you launch resources in a virtual network you define.
+              AWS ထဲမှာ ကိုယ်ပိုင် private network တစ်ခုတည်ဆောက်တာပါ။
+            Subnets:
+              Sections of a VPC used to organize resources. Can be public (internet-facing) or private (internal only).
+              VPC ထဲက smaller network section ဖြစ်ပါတယ်။
+              Resources တွေကို organize လုပ်ဖို့ subnet တွေခွဲတယ်။
+              Subnet အဓိက ၂ မျိုးရှိတယ် -
+                Public Subnet
+                  Internet ကနေတိုက်ရိုက် access လုပ်နိုင်တဲ့ subnet ဖြစ်တယ်။
+                Private Subnet
+                  Internet ကနေတိုက်ရိုက် access မရတဲ့ subnet ဖြစ်တယ်။
+                  ဥပမာ -
+                    Database server
+                    Internal application server
+                    Backend services
+            Connectivity:
+              AWS resources တွေနဲ့ connect လုပ်ဖို့ နည်းလမ်းအမျိုးမျိုးပေးထားတယ်။
+              Public internet ကနေ connect လုပ်တာရှိသလို private dedicated connection တွေလည်းရှိတယ်။
+              Internet Gateway:
+                Internet Gateway က VPC နဲ့ public internet ကြား connection ဖြစ်ပါတယ်။
+                ဥပမာ public web server တစ်ခု internet ကနေ access ရဖို့ Internet Gateway လိုတယ်။
+              Virtual Private Gateway:
+                Virtual Private Gateway က company private network နဲ့ VPC ကြား encrypted VPN connection တည်ဆောက်ပေးတယ်။
+                ဒီ connection က approved network တွေကပဲ access ရမယ်။
+                ဒါကြောင့် secure private connection ရတယ်။
+                ဥပမာ office network ကနေ AWS VPC ထဲက database ကို VPN နဲ့ connect လုပ်နိုင်တယ်။
+              AWS Direct Connect:
+                AWS Direct Connect က company datacenter နဲ့ AWS ကြား dedicated/physical private line တည်ဆောက်ပေးတယ်။
+                Public internet မသုံးဘဲ direct private connection ဖြစ်တယ်။
+            Cloud Subnet and Access:
+              Network Traffic:
+                data travels across networks as packets.
+                when a packet enters a vpc through an Internet Gateway.
+              Network Access Control Lists(ACLs):
+                ACLs are firewalls that control inbound and outbound traffic at the subnet level.
+                Packets on the approved list pass through; others are denied. 
+                ACLs use stateless packet filtering: no memory of previous requests.
+              Security Groups:
+                Security Groups are firewalls that control traffic for specific EC2 instances. 
+                By default, they deny all inbound traffic and allow all outbound. 
+                Security Groups use stateful packet filtering.
+                Which statement about Security Groups is correct?|
+                  A. They operate at the subnet level
+                  B. They are stateless
+                  C. They control traffic for specific EC2 instances
+                  D. They deny all outbound traffic by default
+                  Correct ans: C.
+            Global Networking:
+              user တွေဘယ်နိုင်ငံကဝင်ဝင် application ကိုမြန်မြန်နဲ့ reliable ဖြစ်အောင် route လုပ်ပေးတဲ့ networking services
+              DNS:
+                DNS (Domain Name System) က internet phone book လိုမျိုး
+                User က website name ရိုက်ထည့်လိုက်ရင် DNS က domain name ကို IP address အဖြစ်ပြောင်းပေးတယ်။
+                Computer ကတော့ actual IP address နဲ့ connect လုပ်တယ်။
+              Amazon Route 53
+                Amazon Route 53 က AWS ရဲ့ DNS service ဖြစ်တယ်။
+                Route 53 က user request ကို correct destination ဆီ route လုပ်ပေးတယ်။
+                Flow က ဒီလိုဖြစ်တယ် -
+                  User က website domain ကို request လုပ်တယ်
+                  Amazon Route 53 က domain name ကို IP address resolve လုပ်ပေးတယ်
+                  Request က user နဲ့အနီးဆုံး Amazon CloudFront Edge Location ဆီသွားတယ်
+                  CloudFront က backend application ဆီ request ပို့တယ်
+                  Request က Load Balancer ဆီရောက်တယ်
+                  Load Balancer က healthy EC2 instance ဆီ request ပို့တယ်
+                  Response ကို user ဆီပြန်ပို့တယ်
 
+                  User→Route 53→CloudFront→Load Balancer→EC2
+                  CloudFront က frequently requested content တွေကို Edge Location မှာ cache ထားပေးတယ်။
+                  ဒါကြောင့် user နဲ့ data source ကြား distance နည်းပြီး website load ပိုမြန်တယ်။
+              AWS Global Accelerator
+                AWS Global Accelerator က traffic ကို public internet မသုံးဘဲ AWS private global network ပေါ်ကနေ route လုပ်ပေးတယ်။
+              Global Architectures
+                Direct Connect Failover:
+                  ဒီ architecture pattern က high-bandwidth private connection လိုတဲ့ company တွေအတွက်အသုံးများတယ်
+                  Single connection တစ်ခုတည်းသုံးရင် အဲ့ဒီ line ပျက်သွားတဲ့အခါ service down နိုင်တယ်။
+                  ဒါကြောင့် multiple Direct Connect connections သုံးပြီး failover setup လုပ်တယ်။
+                Multi-Region Content Delivery:
+                  pattern က global users တွေအတွက် low latency နဲ့ content ပို့ချင်တဲ့အခါသုံးတယ်။
+                  User က website ကို request လုပ်တဲ့အခါ -
 
-          
-
-          
-          
-
-
-        
+                  User request က Amazon Route 53 ဆီသွားတယ်
+                  Route 53 က nearest region သို့မဟုတ် best endpoint ကိုရွေးတယ်
+                  Request က nearest Amazon CloudFront Edge Location ဆီသွားတယ်
+                  Cached content ရှိရင် CloudFront က direct response ပေးတယ်
+                  Cache မရှိရင် origin server ဆီသွားပြီး content ယူတယ်
+                  Origin server ကို multiple Availability Zones မှာထားပြီး high availability ရအောင်လုပ်တယ်
+        AWS Storage:
+          provides multiple storage options to meet different needs: 
+          block storage for EC2 instances, 
+          object storage for files and media, and 
+          file storage for shared access across applications.
+          Storage Types:
+            Block Storage:
+              Low-latency storage volumes that attach to EC2 instances like physical hard drives.
+                EC2 Instance Store: Temporary, high-performance storage
+                  EC2 instance stop / terminate ဖြစ်သွားရင် data ပျောက်နိုင်တယ်။
+                Amazon EBS: Persistent block storage volumes
+                  EC2 restart လုပ်လည်း data မပျောက်ဘူး။
+            Object Storage:
+              Manages data as objects with unlimited scalability for unstructured data like documents, images, and videos.
+                Amazon S3: Store and retrieve any amount of data
+                  unstructured data တွေအတွက်သင့်တော်
+                  Which AWS service can be used as the origin for cached content in CloudFront?
+                    A. Amazon S3
+                    B. Amazon Route 53
+                    C. AWS Direct Connect
+                    D. Amazon VPC
+                    Correct Ans: A
+                    Reason: Amazon CloudFront needs an origin server or storage location to fetch content from, and 
+                    Amazon S3 is a common origin for static files like images, videos, and website assets.
+            File Storage:
+              Shared file systems accessible over networks by multiple users and applications simultaneously.
+                Amazon EFS: Scalable NFS file system, Linux servers တွေအတွက်
+                Amazon FSx: Managed file storage, Windows, Lustre, NetApp, OpenZFS စတဲ့ specialized file systems တွေအတွက်
+          Shared Responsibility for Storage:
+            Storage service အလိုက် AWS နဲ့ customer responsibility ကမတူဘူး။
+              Fully managed: AWS handles everything. You only manage data, access, and configuration, eg: s3
+              Managed: AWS handles infrastructure. You only manage backups and encryption, eg: amazon rds
+              Unmanaged: You handle everything. You manage data management, backups, and encryption, eg: ec2 with attached storage
