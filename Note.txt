@@ -173,7 +173,7 @@ aws:
             for Developers
             focus on deployment, management of your apps.
             Don't worry about, provisioning, configuring or understanding the hardware or OS.
-            eg: elastic beanstack, heroku, google app engine.
+            eg: elastic Beanstalk, heroku, google app engine.
           IaaS:
             for admins
             the basic building for cloud IT. provides access to networking features, computers and storage.
@@ -258,8 +258,18 @@ aws:
                 Orchestration ကို Kubernetes သုံးတယ်
                 Database ကို standard PostgreSQL သုံးတယ်
                 ဒီလိုဆိုရင် Amazon Web Services ကနေ Google Cloud Platform သို့မဟုတ် Microsoft Azure ကို ပြောင်းရတာ ပိုလွယ်ပါတယ်။
-        New account:
+        New account: 
+          every aws account has a unique Account ID.
+          current user in the Global Navigation.
+          12 digits, 
           account alias: edit,delete
+          arn:
+            amazon resource name(ARNs):
+              resource တစ်ခုချင်းစီကို unique identify လုပ်ဖို့ ARN ကိုအသုံးပြု
+              uniquely identify aws resources.
+              format: arn:partition:servicce:region:arrcount-id:resource-id/type
+              arns can includ a path.
+              paths can include a wildcard character, namely an sterisk(*)
           iam: identity acccess management:
             access key: api only usecase.
             aws management console: dashboard access.
@@ -408,9 +418,18 @@ aws:
               Elasticity က short-term changes အတွက်ဖြစ်ပြီး auto scaling နဲ့ဆိုင်ပါတယ်။
             [Missing]
               Fault tolerance
-                System တစ်ခုမှာ component တစ်ခု fail ဖြစ်သွားရင်တောင် service တစ်ခုလုံးမပျက်အောင် design လုပ်ထားတာပါ။ ဥပမာ server တစ်လုံး down သွားရင် အခြား server ကအလုပ်ဆက်လုပ်ပေးတယ်။
+                System တစ်ခုမှာ component တစ်ခု fail ဖြစ်သွားရင်တောင် service တစ်ခုလုံးမပျက်အောင် design လုပ်ထားတာပါ။ 
+                ဥပမာ server တစ်လုံး down သွားရင် အခြား server ကအလုပ်ဆက်လုပ်ပေးတယ်။
               disaster recovery
-                Major outage, fire, earthquake, data corruption လို problem ဖြစ်ရင် backup နဲ့ recovery plan ရှိလို့ system ကို မြန်မြန်ပြန်တင်နိုင်တယ်။ Multi-region backup နဲ့ failover setup တွေကိုလည်း cloud မှာလွယ်လွယ်လုပ်နိုင်တယ်။
+                Major outage, fire, earthquake, data corruption လို problem ဖြစ်ရင် backup နဲ့ recovery plan ရှိလို့ system ကို မြန်မြန်ပြန်တင်နိုင်တယ်။ 
+                Multi-region backup နဲ့ failover setup တွေကိုလည်း cloud မှာလွယ်လွယ်လုပ်နိုင်တယ်။
+                  CloudEndure Diasater recorvery:
+                    CloudEndure Disaster Recovery က disaster ဖြစ်လာတဲ့အချိန် (data center ပျက်တာ၊ server down တာ) မှာ system ကိုမြန်မြန်ပြန်လည်ရယူနိုင်အောင်လုပ်ပေးတဲ့ service ဖြစ်ပါတယ်။
+                    Key Idea
+                      Data ကို real-time နီးပါး replicate လုပ်ထားတယ်
+                      Disaster ဖြစ်လာတဲ့အချိန်မှာ AWS မှာ instant recovery လုပ်နိုင်တယ်
+                      Staging area ဆိုတာ AWS account ထဲမှာ low-cost infrastructure တစ်ခုဖြစ်ပြီး replicated data တွေကိုထားတဲ့နေရာပါ။
+                      ဒီနေရာမှာ resource cost နည်းနည်းပဲသုံးတယ်။
           Six Advantages of Cloud:(aws original description of cloud benefits)
             1. Trade Capital Expense for Variable Expense
             အရင်လို server, storage, network equipment တွေကို upfront cost နဲ့ကြိုဝယ်စရာမလိုဘူး။ Cloud မှာတော့ Pay-as-you-go ဖြစ်လို့ သုံးသလောက်ပဲ ပိုက်ဆံပေးရတယ်။
@@ -1118,7 +1137,39 @@ aws:
           အဓိကနည်းလမ်း ၃ မျိုး:
           AWS Management Console
             AWS Management Console က browser ကနေအသုံးပြုတဲ့ web-based UI ဖြစ်ပါတယ်။
+            WISWIG Web Interface.
+            Point and Click to manually launch and configure AWS resources with limited knowledge.
+            kns "ClickOps".
+              each have their own console.
+              some services console have umbrella console.
+                vpc console, ec2 console, cloudwatch console...
           AWS Command Line Interface (CLI)
+            CLI ဆိုတာ text command တွေရိုက်ပြီး computer ကို control လုပ်တဲ့ interface
+            👉 GUI (mouse click) မဟုတ်ဘူး
+            👉 command ရိုက်ပြီးလုပ်တာ
+          Other knowledge:
+            Terminal က command ရိုက်ဖို့ screen (input/output window) ဖြစ်တယ်။
+              👉 CLI ကို run လုပ်တဲ့နေရာ
+              👉 text only interface
+            Console ဆိုတာဘာလဲ
+              Console က physical device (keyboard + screen) ကိုဆိုလိုတာပါ (old meaning)
+              Modern usage မှာတော့ -
+              👉 Web Console (AWS Console) = browser GUI
+              👉 Physical console = keyboard + monitor
+            Shell ဆိုတာဘာလဲ
+              Shell က command ကို process လုပ်တဲ့ program ဖြစ်တယ်။
+              👉 User → command ရိုက်
+              👉 Shell → interpret လုပ်ပြီး OS ကိုပို့
+              Popular shells:
+                Bash
+                Zsh
+                PowerShell
+                Console = (old) physical input device / (modern) web UI
+          Note:
+            Console: physical input device/web ui
+            CLI = text commands
+            Shell = command interpreter
+            Terminal = interface
           AWS SDKs
             AWS SDKs က programming language အလိုက် AWS API ကို access လုပ်ဖို့ libraries တွေဖြစ်ပါတယ်။
             Application code ထဲကနေ AWS service တွေကို directly control လုပ်နိုင်တယ်။
@@ -1256,3 +1307,108 @@ aws:
               Fully managed: AWS handles everything. You only manage data, access, and configuration, eg: s3
               Managed: AWS handles infrastructure. You only manage backups and encryption, eg: amazon rds
               Unmanaged: You handle everything. You manage data management, backups, and encryption, eg: ec2 with attached storage
+        AWS Instance Stores:
+          directly attach လုပ်ထားတဲ့ temporary block storage
+          ဒီ storage က EC2 instance run နေတဲ့အချိန်မှာ data သိမ်းထားနိုင်တယ်။
+          Instance reboot လုပ်ရင် data မပျောက်ဘူး။
+          ဒါပေမယ့် instance ကို stop လုပ်လိုက်တာ၊ terminate လုပ်လိုက်တာနဲ့ data အားလုံးပျောက်သွားမယ်။
+          Best Use Cases
+            Instance Store က temporary data တွေအတွက်သင့်တော်တယ်။
+            ဥပမာ -
+
+            Cache data
+            Temporary files
+            Scratch data
+            Buffers
+            Session data
+
+
+        Business Continuity Plan (BCP):
+          a document that outlines how a business will continue operation durying an unplanned disruption in services.
+          MM Note:
+            BCP ဆိုတာ business တစ်ခုမှာ unexpected problem (server down, data center ပျက်, network outage) ဖြစ်လာတဲ့အချိန်မှာ လုပ်ငန်းကို ဆက်လက် run နိုင်အောင် 
+            ဘယ်လိုလုပ်မလဲဆိုတာရေးထားတဲ့ plan/document ဖြစ်ပါတယ်။
+          Recovery Point Objectgive(RPO):
+            the max acceptable amt of data loss after an unplanned data-loss incident, expressed as an amt of time.
+            How much data are you willing to lose?
+            RPO က data loss ကိုဘယ်လောက်ထိ ခွင့်ပြုမလဲ ဆိုတာကို ပြောတာပါ။
+            Time နဲ့တိုင်းတာတယ်။
+            ဥပမာ -
+              RPO = 5 minutes
+              → အများဆုံး 5 minutes data ပဲပျောက်လို့ရတယ်
+              → Backup / replication ကို 5 mins တစ်ခါလုပ်ရမယ်
+              RPO = 1 hour
+              → 1 hour data loss လက်ခံနိုင်တယ်
+              🔑 RPO နည်းလေလေ → data protection ပိုကောင်းလေလေ → cost ပိုများနိုင်တယ်
+          Recovery Time Objective(RTO):
+            the max amt of downtime your business can tolerate without incurring a significant financial loss.
+            How much time are you willing to go down?
+            RTO က system down ဖြစ်တဲ့အချိန် ဘယ်လောက်ကြာမှ ပြန်လာနိုင်မလဲ ဆိုတာပါ။
+            👉 “Service ဘယ်လောက်ကြာ down ဖြစ်လို့ရလဲ?”
+
+            ဥပမာ -
+
+            RTO = 10 minutes
+            → 10 minutes အတွင်း system ပြန်တက်ရမယ်
+            RTO = 4 hours
+            → 4 hours downtime လက်ခံနိုင်တယ်
+
+            🔑 RTO နည်းလေလေ → recovery speed မြန်လေလေ → infrastructure cost ပိုများနိုင်တယ်
+            Summary:
+              RPO = Data loss tolerance
+              RTO = Downtime tolerance
+
+              RPO=Data Loss Time,RTO=Recovery Time
+
+              Simple Example
+              Company တစ်ခုမှာ -
+
+              RPO = 5 minutes
+              RTO = 10 minutes
+
+              ဆိုရင် -
+                Data loss = အများဆုံး 5 mins ပဲ
+                System down = အများဆုံး 10 mins ပဲ
+              ဆိုပြီး design လုပ်ရမယ်။
+        Disaster Recovery Options:
+          muliple options for recovery
+            Backup & Restore > Pilot Light > Warm Standy > Multi-site Active/Active
+            Backup & Restore:
+              You backup your data and restore it to new infrastructure
+              RPO/RTO: Hours
+              . Lower priority use cases
+              . Restore data after event
+              . Deploy resources after event . Start & and scale resources after event
+              . Cost $
+            Pilot Light:
+              RPO/RTO: 10mins
+              Data is replicated to another region with the minimal services running
+              . Less stringent RTO &RPO
+              . Core Services
+              . Cost $$
+            Warm Standy:
+              RPO/RTO: Minutes
+              Scaled down copy of your infrastructure running ready to scale up
+              . Business Critical Services
+              . Scale resources after event
+              . Cost $$$
+            Multi-site Active/Active:
+              RPO/RTO: Real-time
+              Scaled up copy of your infrastructure in another region
+              · Zero downtime
+              · Nero zero loss
+              . Mission Critical Services
+              . Cost $$$$
+        API:
+          software that allows two apps/services to talk to each other.
+          common type of api is via http/s requests.
+        AWS Tools for PowerShell:
+          PowerShell is a task automation and configuration management framework.
+          PowerShell ကနေ AWS services တွေကို command line နဲ့ control
+          have both of a command-line shell and a scription language.
+          PowerShell is built on top of .Net Common Lang Runtime(CLR), and accepts and returns .NET objects.
+          via Cmdlets: a special type of cmd in PowerShell in form of capitalized verb-and-noun e.g. New-S3Bucket.
+        
+      
+
+
