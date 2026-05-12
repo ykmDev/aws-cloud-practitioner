@@ -251,7 +251,8 @@ aws:
                   Cost tracking ခက်နိုင်တယ်
                   Team skill requirement ပိုမြင့်တယ်
             Note:
-              Vendor lock-in ဆိုတာ company တစ်ခုက provider တစ်ခုတည်းရဲ့ services, tools, APIs တွေကို အရမ်းအများကြီးမှီခိုသုံးနေပြီး နောက်ပိုင်း provider ပြောင်းချင်တဲ့အခါ အရမ်းခက်သွားတာကို ဆိုလို
+              Vendor lock-in ဆိုတာ company တစ်ခုက provider တစ်ခုတည်းရဲ့ services, tools, APIs တွေကို အရမ်းအများကြီးမှီခိုသုံးနေပြီး
+                နောက်ပိုင်း provider ပြောင်းချင်တဲ့အခါ အရမ်းခက်သွားတာကို ဆိုလို
               Vendor lock-in နည်းတယ် ဆိုတာ provider တစ်ခုတည်းကို အရမ်းမမှီခိုဘဲ standard technologies တွေသုံးထားတာပါ။
               ဥပမာ -
                 Container ကို Docker နဲ့ build လုပ်ထားတယ်
@@ -403,12 +404,15 @@ aws:
               go blobal in minutes
               Application ကို နိုင်ငံအများကြီးမှာ လွယ်လွယ် deploy လုပ်နိုင်တယ်။ ဥပမာ Amazon Web Services region အများကြီးမှာ service run လုပ်နိုင်တယ်။
             security:
-            Cloud provider တွေမှာ encryption, firewall, IAM, monitoring, compliance tools တွေပါပြီးသားဖြစ်တယ်။ Small company တွေက ကိုယ်တိုင် data center တည်ဆောက်တာထက် security ပိုကောင်းနိုင်တယ်။
+              Cloud provider တွေမှာ encryption, firewall, IAM, monitoring, compliance tools တွေပါပြီးသားဖြစ်တယ်။ 
+              Small company တွေက ကိုယ်တိုင် data center တည်ဆောက်တာထက် security ပိုကောင်းနိုင်တယ်။
             reliability: (cloud architecture)
               stop spending money on running and maintainging data centers
-              Cloud provider တွေက infrastructure redundancy, backup, monitoring, failover တွေပါပြီးသားဖြစ်လို့ service မပြတ်တောက်ဖို့ ပိုကောင်းတယ်။ Company က data center run နေရတဲ့ cost နဲ့ maintenance ကိုလည်း လျှော့နိုင်တယ်။
+              Cloud provider တွေက infrastructure redundancy, backup, monitoring, failover တွေပါပြီးသားဖြစ်လို့ 
+              service မပြတ်တောက်ဖို့ ပိုကောင်းတယ်။ Company က data center run နေရတဲ့ cost နဲ့ maintenance ကိုလည်း လျှော့နိုင်တယ်။
             high availability: (cloud architecture)
-              Application ကို server တစ်လုံးမဟုတ်ဘဲ server အများကြီးပေါ်မှာ run လုပ်နိုင်တယ်။ Server တစ်လုံးပျက်သွားရင်လည်း အခြား server ကဆက် run ပေးနိုင်တယ်။
+              Application ကို server တစ်လုံးမဟုတ်ဘဲ server အများကြီးပေါ်မှာ run လုပ်နိုင်တယ်။ 
+              Server တစ်လုံးပျက်သွားရင်လည်း အခြား server ကဆက် run ပေးနိုင်တယ်။
             scalability: (cloud architecture)
               beefit from massive economies of scale
               Scalability ဆိုတာ workload တိုးလာတဲ့အခါ resource ကို တိုးနိုင်တဲ့ ability ဖြစ်ပါတယ်။
@@ -440,9 +444,11 @@ aws:
             4. Increase Speed and Agility
             Server, database, storage တွေကို minutes အတွင်း create လုပ်နိုင်တယ်။ Hardware order လုပ်ပြီး ရက်အတော်ကြာစောင့်စရာမလိုဘူး။
             5. Stop Spending Money on Running and Maintaining Data Centers
-            Company က power, cooling, rack, hardware maintenance, security, networking စတာတွေကို ကိုယ်တိုင်မလုပ်တော့ဘူး။ အဲ့အစား customer နဲ့ business growth ကိုပို focus လုပ်နိုင်တယ်။
+            Company က power, cooling, rack, hardware maintenance, security, networking စတာတွေကို ကိုယ်တိုင်မလုပ်တော့ဘူး။ 
+            အဲ့အစား customer နဲ့ business growth ကိုပို focus လုပ်နိုင်တယ်။
             6. Go Global in Minutes
-            Application ကို region အများကြီးမှာ လွယ်လွယ် deploy လုပ်နိုင်တယ်။ ဥပမာ Amazon Web Services မှာ multiple regions ရှိလို့ Japan, Singapore, US, Europe စတဲ့နေရာတွေမှာ app ကို run လုပ်နိုင်တယ်။
+            Application ကို region အများကြီးမှာ လွယ်လွယ် deploy လုပ်နိုင်တယ်။ 
+            ဥပမာ Amazon Web Services မှာ multiple regions ရှိလို့ Japan, Singapore, US, Europe စတဲ့နေရာတွေမှာ app ကို run လုပ်နိုင်တယ်။
           Seven Advantages to Cloud:
             cost-effective: pay for what you consume, no up-front cost.
             global: launch workloads anywhere.
@@ -484,7 +490,8 @@ aws:
               Local Zone ဆိုတာ specific city တစ်ခုနီးနားမှာ low-latency service ပေးဖို့ region extension လုပ်ထားတာပါ။
 
               AWS မှာ compute, storage, database, AI, networking, analytics စတဲ့ service category အမျိုးမျိုးရှိပါတယ်။
-              Security ပိုင်းမှာတော့ AWS က physical infrastructure security ကိုတာဝန်ယူပြီး customer က application, data, access control, configuration security ကိုတာဝန်ယူရပါတယ်။
+              Security ပိုင်းမှာတော့ AWS က physical infrastructure security ကိုတာဝန်ယူပြီး customer က application, data, access control, 
+                configuration security ကိုတာဝန်ယူရပါတယ်။
               ဒါကို Shared Responsibility Model လို့ခေါ်ပါတယ်။
               AWS Wavelength:
                 AWS Wavelength က 5G network edge မှာ application run လုပ်နိုင်အောင်လုပ်ပေးတဲ့ service ဖြစ်ပါတယ်။
@@ -866,6 +873,7 @@ aws:
             Dedicated Hosts
               Physical server တစ်လုံးကို ကိုယ်တစ်ယောက်တည်းသီးသန့်သုံးတာပါ။
               အရမ်းစျေးကြီးပေမယ့် existing software license တွေသုံးနိုင်တယ်။
+              per-socket or per-core licensing
             အကျဉ်းချုပ်ဆိုရင် -
               Short-term = On-Demand
               Long-term predictable = Savings Plans / Reserved Instances
@@ -906,7 +914,8 @@ aws:
 
               Auto Scaling က traffic ပေါ်မူတည်ပြီး instance အသစ်တွေ create / remove လုပ်ပေးတယ်
               Load Balancer က user requests တွေကို server အများကြီးဆီ distribute လုပ်ပေးတယ်
-            Note: Server တွေက request အရမ်းများလာရင် timeout, slow response, outage ဖြစ်နိုင်တယ်။ Auto Scaling က အဲ့ဒီ problem ကိုကာကွယ်ပေးတယ်
+            Note: Server တွေက request အရမ်းများလာရင် timeout, slow response, outage ဖြစ်နိုင်တယ်။ 
+              Auto Scaling က အဲ့ဒီ problem ကိုကာကွယ်ပေးတယ်
             Dynamic Scaling
               Dynamic scaling က real-time traffic change ကိုကြည့်ပြီး instance တိုး / လျှော့ လုပ်တာပါ။
             Predictive Scaling
@@ -1315,12 +1324,1104 @@ aws:
           Best Use Cases
             Instance Store က temporary data တွေအတွက်သင့်တော်တယ်။
             ဥပမာ -
+              Cache data
+              Temporary files
+              Scratch data
+              Buffers
+              Session data
+        AWS EBS:
+          Elastic Block Store:
+          provides persistent block-level storage volumes for EC2 instances. 
+          Unlike instance stores, EBS data persists even when the instance is stopped or terminated.
+          Common use cases are: database hosting, application backups, rapid deployment of dev environments.
+          Benefits:
+            Data persistence: Data remains available even if the EC2 instance stops
+            Migration: Move volumes between Availability Zones using snapshots
+            Flexibility: Attach volumes to different instance types, modify size and performance on the fly
+            Disaster recovery: Snapshots provide reliable backups across regions
+          Snapshots:
+            incremental backups. The first backup copies all data; subsequent backups only copy changed blocks, saving storage costs.
+            creation flow: Snapshot1→Snapshot2 (changes)→Snapshot3 (changes)
+            👉 Snapshot2 ကို delete လုပ်လိုက်ရင် data အားလုံးမပျက်ပါဘူး
+            👉 Snapshot2 မှာရှိပြီး တခြား snapshot တွေမသုံးတဲ့ data (unique data) ပဲပျက်ပါတယ်
+        Amazon S3:
+          Simple Storage Service:
+          99.999999999% durability. 
+          can store any type of file up to 5 TB per object.
+          Concepts:
+            Buckets:
+              a container for objects with a globally unique name.
+            Object:
+              consists of data (the file), metadata (information about it), and a key (unique identifier).
+            Security:
+              private by default. Grant access using:
+                Bucket policies: Allow or deny actions on the bucket
+                Identity-based policies: Control user, group, or role permissions
+                Encryption: Protect data at rest and in transit
+              Lifecycle:
+                Transition actions: Move objects to cheaper storage classes over time
+                Expiration actions: Automatically delete objects after a set period
+              Storage Classes:
+                Frequently Accessed Data:
+                    S3 Standard:
+                      Data accessed often. Stored in 3+ AZs. Highest availability, highest cost.
+                    S3 Express One Zone:
+                      Fastest access (single-digit ms). 10x faster than Standard. 1 AZ.
+                Infrequently Accessed Data:
+                  S3 Standard-IA:
+                    Data accessed less often. 3+ AZs. Lower storage cost, higher retrieval cost.
+                  S3 One Zone-IA:
+                    Same as Standard-IA but stored in 1 AZ. Cheaper.
+                  S3 Intelligent-Tiering:
+                    Unknown access patterns. Automatically moves data between tiers.
+                Archive Storage (Glacier):
+                  Glacier Instant Retrieval:
+                    Rarely accessed, but need instant access. 68% cheaper than Standard-IA.
+                  Glacier Flexible Retrieval:
+                    Accessed 1-2x per year. Retrieval: minutes to hours.
+                  Glacier Deep Archive:
+                    Long-term storage (7-10+ years). Lowest cost. 12-hour retrieval.
+        Amazon EFS:
+          a fully managed, scalable file storage service using the NFS protocol.
+          automatically scales to petabytes and allows multiple EC2 instances 
+          to access the same file system simultaneously.
+          Benefits:
+            Multi-AZ redundancy: Replicates data across Availability Zones for high availability
+            Shared access: Thousands of concurrent NFS connections from multiple EC2 instances
+            Elastic storage: Grows and shrinks automatically - pay only for what you use
+            Features:
+              Standard: Multi-AZ resilience with highest durability and availability
+              One Zone: Single AZ storage at reduced cost
+              Archive: Lowest cost for rarely accessed data
+            Lifecycle:
+              Automatically move data between storage classes based on access patterns:
+                To Infrequent Access: Files not accessed for 30 days
+                To Archive: Files not accessed for 90 days
+                Back to Standard: Optionally restore when accessed
+        Comparing AWS Storage Services:
+          block storage (EBS) for EC2 instances, 
+          object storage (S3) for files and media, and 
+          file storage (EFS) for shared access across instances.
+        When to Use:
+          EBS: Databases, boot volumes, applications needing fast read/write on a single instance
+          S3: Static files, backups, media storage, data lakes, web content
+          EFS: Shared file systems, content management, web serving across multiple instances
+        AWS Database Services:
+          Types:
+            Relational (SQL):
+              Amazon RDS:
+                managed MySQL, PostgreSQL, MariaDB, Oracle, SQL Server
+                Use cases: web applications, enterprise workloads, e-commerce platforms
+                Benefits:
+                  Multi-AZ deployment: Replicates data to a standby instance for high availability
+                  Automated backups: Plus manual snapshots when needed
+                  Read replicas: Offload traffic for better performance
+                  Security: VPC isolation, encryption at rest and in transit
+              Amazon Aurora:
+                High-performance MySQL/PostgreSQL-compatible.
+                delivering up to 5x MySQL throughput and 3x PostgreSQL throughput.
+                six copies of data across three AZs, provides 99.99% availability, and automatically scales storage from 10 GB to 128 TB.
+                Benefits:
+                  Distributed storage: Across multiple nodes for high performance
+                  Continuous backup: To S3 with point-in-time recovery
+                  Auto-failover: Redirects traffic to healthy replicas
+                  Use cases: Gaming, media/content management, real-time analytics
+            NoSQL:
+              Amazon DynamoDB:
+                Key-value and document database
+                use cases: gaming platforms, financial services, mobile apps with global users
+                Benefits:
+                  Auto-scaling: Throughput scales up or down based on usage
+                  High availability: 99.999% availability across three facilities per Region
+                  Encryption: All data automatically encrypted at rest
+            Analytics & Migration:
+              Amazon Redshift: Data warehouse for analytics
+                uses SQL, AWS-designed hardware
+                use cases:  business intelligence, reporting dashboards, log analysis, and data lake analytics
+              AWS DMS: Database migration with minimal downtime
+                moves data from a source database to a target database.
+            When to Use Each:
+              RDS: Complex queries, joins, ACID (Atomicity, Consistency, Isolation, Durability) transactions, traditional applications
+              DynamoDB: High-traffic apps, gaming, IoT, real-time data at any scale
+              use case:
+                Test applications against production data without affecting it
+                Combine multiple databases into one
+                Replicate data to other sources for analytics or backup
+            Additional Database Services:
+              Amazon DocumentDB:
+                MongoDB-compatible document database that stores JSON-like documents with dynamic schemas. 
+                MongoDB compatibility: Use existing MongoDB code without modification
+                Scalability: Up to 64 TB storage, millions of requests per second
+                Read throughput: Up to 15 replica instances
+            Amazon Neptune:
+              graph database for storing and querying highly connected data
+              Use cases: social networks, fraud detection, and recommendation systems.
+              High performance: Processes billions of relationships in milliseconds
+              Scalability: Up to 64 TB storage
+            Amazon Quantum Ledger Database (QLDB):
+              ledger database with an immutable, cryptographically verifiable transaction log. Tracks all data changes over time. 
+            AWS Managed Blockchain:
+              Create and manage blockchain networks using open-source frameworks like Ethereum and Hyperledger Fabric.
+            Amazon ElastiCache:
+              in-memory caching service that provides sub-millisecond latency. Supports Redis, Valkey, and Memcached. 
+              Use cases: session management, query caching, and gaming leaderboards.
+            Amazon DynamoDB Accelerator (DAX):
+              in-memory cache specifically for DynamoDB that improves response times from milliseconds to microseconds
+              Fully managed with no code changes required.
+            AWS Backup:
+              Centralizes and automates data protection across AWS resources including EBS, EFS, and databases.
+        AWS AI and Machine Learning:
+          Artificial Intelligence (AI) enables computers to perform tasks that typically require human intelligence, 
+          while Machine Learning (ML) trains systems to learn from data and improve over time.
+          Note:
+            AI ဆိုတာက computer ကို လူလိုအလုပ်လုပ်နိုင်အောင်လုပ်တာ
+              computer တွေကို လူလို စဉ်းစား၊ သင်ယူ၊ problem ဖြေရှင်းနိုင်အောင်လုပ်တာ
+            ML က AI ရဲ့ sub-part တစ်ခုဖြစ်တယ်။
+            👉 Computer ကို data နဲ့ train လုပ်ပြီး ကိုယ်တိုင် learn လုပ်နိုင်အောင်လုပ်တာ
+            👉 Programming rules ကို hard-code မလုပ်ဘူး
+            👉 Data ကနေ pattern ကိုရှာပြီး improve လုပ်တယ်
+          AWS AI/ML Services:
+            3 levels:
+              AI Services:
+                ready-made AI
+                model built by aws.
+                no ML knowledge need.
+                Services:
+                  Amazon Comprehend: Text ထဲက sentiment, keywords, language detect
+                  Amazon Polly: Text -> Voice
+                  Amazon Transcribe: Voice -> Text
+                  Amazon Translate: Language Translate
+                  Amazon Rekognition: Image/video analyze(face, object)
+                  Amazon Textract: PDF/form -> text extract
+                  Amazon Lex: Chatbot create (voice + text)
+                  Amazon Personalize: Netflix-like recommendation
+                  Amazon Kendra: Smart search engine
+              ML Servcies:
+                own model build
+                aws manage infrastructure
+                main servcies: Amazon SageMaker
+                What you do:
+                  Data prepare
+                  Train model
+                  Deploy model
+              ML Frameworks:(အခက်ဆုံး)
+                👉 Full control
+                👉 Everything ကိုကိုယ်တိုင် handle လုပ်ရတယ်
+                  Model design
+                  Training process
+                  Optimization
+                Example frameworks:
+                  TensorFlow
+                  PyTorch
+                👉 AWS က compute resource (EC2, GPU) ပဲပေးတယ်
+              Learning Path:
+                AI Services→ML Services→ML Frameworks
+              Note:
+                “No ML experience needed” → AI Services
+                “Build model with AWS help” → SageMaker
+                “Full control + frameworks” → ML Frameworks
+              Generative AI:
+                content အသစ်တွေ create လုပ်ပေးနိုင်တဲ့ AI ဖြစ်ပါတယ်
+                👉 အရေးကြီးတဲ့ point:
+                  Existing data ကို analyze လုပ်ပြီး → new content generate လုပ်တယ်
+                  Generative AI က Foundation Models (FMs) ကိုအသုံးပြုတယ်
+                  👉 Huge data (internet-scale) နဲ့ pre-train လုပ်ထားတဲ့ models
+                  Concept:
+                    Deep Learning:
+                      ML ရဲ့ subset တစ်ခု
+                      👉 Human brain လို neuron layers တွေသုံးပြီး learning လုပ်တယ်
+                    Foundation Models (FMs):
+                      Very large models
+                      👉 Pre-trained on huge datasets
 
-            Cache data
-            Temporary files
-            Scratch data
-            Buffers
-            Session data
+                      👉 Traditional ML:
+                        One model = one task
+                      👉 Foundation Models:
+                        One model = many tasks
+                      Example: LLM (Large Language Model)
+                      👉 Text-based tasks အတွက်
+                        Chat
+                        Translate
+                        Summarize
+                        Coding
+                Services:
+                  Amazon SageMaker JumpStart: Pre-built models + solutions ready, Few clicks နဲ့ deploy လုပ်နိုင်
+                  Amazon Bedrock: fully managed service, Custom generative AI apps build လုပ်ဖို့အသုံးပြု
+                  Amazon Q: AI assistant, Company data တွေနဲ့ integrate လုပ်နိုင်
+                  ဥပမာ -
+                    Internal chatbot
+                    Knowledge assistant
+              Generative AI vs Traditional ML (exam trick):
+                Traditional ML: Input→Prediction;Generative AI: Input→New Content
+                Traditional ML
+                  Amazon SageMaker
+                  👉 Build model for prediction
+                Generative AI
+                  Amazon Bedrock
+                  👉 Use foundation models
+                  Amazon Q
+                  👉 AI assistant
+              Data Analytics:
+                Data ထဲက useful insights / patterns / trends တွေကိုရှာထုတ်တဲ့ process
+                Example
+                  Shop data:
+                  customer age
+                  purchases
+                  location
+                  Analyze လုပ်ပြီး:
+                  Best selling products
+                  Customer behavior
+                  Future trends
+                  ကိုသိနိုင်တယ်
+                  AI/ML models train ဖို့:
+                    Clean data
+                    Organized data
+                    Structured data
+                    လိုတယ်
+                    ဒါကြောင့်:
+                    👉 Data Analytics + ETL important
+              ETL:
+                extract:Data sources တွေက data ယူတာ
+                transform: Data ကို clean + convert လုပ်တာ
+                load: Final destination ထဲသို့ save.
+                Flow: Extract→Transform→Load
+                Data Pipeline:
+                  Data flow automation system
+                    Automatically
+                      collect
+                      process
+                      move
+                      store
+                      လုပ်ပေးတယ်
+              AWS Data Analytics Services:
+                AWS Glue: Managed ETL
+                Amazon Redshift: Data warehouse
+                Amazon Athena: Query s3 data
+                Amazon Kinesis: Real-time streaming data collect
+              Overall flow:
+                Ingestion→Storage→Catalog→Processing→Analytics/Visualization
+                Data Ingestion:
+                  Data ကို collect + move လုပ်တာ
+                    real time: immediate processing
+                    batch: delayed processing
+                  amazon kinesis data streams:
+                    Massive real-time streaming data collect
+                  amazon data firehouse:
+                    Near real-time delivery service
+                Storage:
+                  amazon s3: data lake storage
+                  amazon redshift: Structured analytics database
+                data cateloging:
+                  aws glue data catelog: Metadata management system
+                Data Processing:
+                  aws glue: managed ETL service
+                  Amazon EMR:
+                    glue: managed ETL
+                    emr: Big data framework
+                Analysis & Visualization
+                  amazon Athena:
+                    SQL query directly on s3
+                    No servers needed
+                  amazon quickSight:
+                    Dashboards + reports
+                  Amazon OpenSearch Service
+                    Search + real-time analytics
+                  | Stage         | AWS Service        |
+                  | ------------- | ------------------ |
+                  | Ingestion     | Kinesis / Firehose |
+                  | Storage       | S3 / Redshift      |
+                  | Catalog       | Glue Data Catalog  |
+                  | Processing    | Glue / EMR         |
+                  | Analytics     | Athena / Redshift  |
+                  | Visualization | QuickSight         |
+                  | Search        | OpenSearch         |
+        Cloud Security:
+          Cloud environment ထဲမှာရှိတဲ့:
+            Data
+            Applications
+            Networks
+            Systems
+            တွေကို attacks / unauthorized access / threats ကနေကာကွယ်တာ
+            ဖြစ်ပါတယ်။
+          Security is shared between:
+            AWS
+            Customer
+          AWS secures the Cloud; Customer secures IN the Cloud
+          Authentication vs Authorization:
+            Authentication ဆိုတာ
+              👉 “Who are you?”
+              ကို verify လုပ်တာ
+              Authentication=Verify Identity
+            Authorization ဆိုတာ
+              👉 “What are you allowed to do?”
+              ကို determine လုပ်တာ
+              Authorization=Permissions / Access Control
+              Easy Real-Life Example
+              Office building:
+              Authentication
+              👉 Security guard checks ID card
+              Authorization
+              👉 Which rooms can enter?
+          security mechanisms 3 categories:
+            Prevent → Protect → Detect/Respond
+              Prevent: Stop problems BEFORE happening
+              Protect: Protect resources & data
+              Detect & Respond: detect attackes/problems and respond
+          AWS Security Services:
+            | Purpose                | AWS Service |
+            | ---------------------- | ----------- |
+            | Identity & permissions | IAM         |
+            | DDoS protection        | Shield      |
+            | Firewall               | WAF         |
+            | Threat detection       | GuardDuty   |
+            | Monitoring             | CloudWatch  |
+            | Logging/API tracking   | CloudTrail  |
+        Shared Responsibility Model:
+          aws: Security OF the Cloud
+          customer: Security IN the Cloud
+          Easy Apartment Analogy:
+            AWS = Apartment building owner
+            Customer = Apartment renter
+              [AWS Responsibility] Building owner handles:
+                Building security
+                Elevator
+                Electricity
+                Main doors
+              [Customer] Renter handles:
+                Room lock
+                Personal belongings
+                Inside security
+          AWS Responsible For
+            Physical server
+            Datacenter
+            Hypervisor
+            Power/network
+          You Responsible For
+            OS patching
+            App security
+            IAM access
+            Data encryption
+      IAM:
+        AWS resources တွေကို
+          ဘယ်သူ access လုပ်နိုင်လဲ
+          ဘာလုပ်နိုင်လဲ
+          Authentication + Authorization
+          Default=Deny All Access
+          Principle of Least Privilege
+            User/system ကို
+            လိုအပ်တဲ့ permission ပဲပေး
+            No extra permissions.
+          Root User Permissions
+            Full access to EVERYTHING
+          Never use Root User for daily tasks.
+          One IAM user per person, NOT shared accounts.
+        Policies = Permission documents
+          Written in JSON.
+          Policy=Permissions Rules
+        Group = Collection of IAM users
+        Role = Temporary permissions
+          User/service: “Assumes” role temporarily
+          Assume Role → Temporary Permissions
+        Multi-Factor Authentication (MFA):
+          Extra login security layer
+            Even if password stolen:
+            👉 attacker still cannot login easily
+        IAM Identity Center
+          Centralized login management
+        Supports:
+          Single Sign-On (SSO)
+          Multiple AWS accounts
+        AWS Secrets Manager
+          Securely store:
+          passwords
+          API keys
+          database credentials
+          Also supports:
+            automatic rotation
+        AWS Systems Manager
+          Centralized infrastructure management
+      Protecting Networks and Applications:
+        Applications/network တွေကို
+          attacks
+          malicious traffic
+          overloads
+          ကနေကာကွယ်တာ
+          Attackers:
+            fake traffic အများကြီးပို့
+              Result:
+              servers overloaded
+              real users cannot access
+          DoS Attack: Denial of service
+            Single attacker:
+              Huge traffic flood
+              Server overload ဖြစ်အောင်လုပ်
+            concept: One Attacker → Massive Traffic → Service Unavailable
+          DDoS Attack: Distributed Denial of service
+            Multiple infected computers attack together.
+              These infected machines are called:
+              Botnets / Zombie bots
+              Why More Dangerous?
+              Because:
+                attack comes from many IPs
+                harder to block
+                massive traffic volume
+            concept: Many Bots → Traffic Flood → Target Down
+        AWS already provides built-in protections.
+          Security Groups:
+            Instance-level firewall
+              controls:
+                inbound traffic
+                outbound traffic
+            Important: sg are Stateful.
+              Return traffic automatically allowed.
+          Elastic Load Balancing (ELB):
+            distributes traffic across servers
+              Instead of:
+              👉 one server overloaded
+              ELB:
+              👉 spreads traffic
+            Additional Protection:
+              ELB absorbs traffic before servers directly receive it.
+          AWS Global Infrastructure:
+            AWS Regions + Edge Locations:
+              enormous network capacity
+              This helps absorb attacks.
+          AWS Shield:
+            Managed DDoS protection service
+            AWS Shield Standard
+                Free
+                Enabled automatically
+              Protects against:
+              common DDoS attacks
+            AWS Shield Advanced:
+              Paid service, advanced protection
+          AWS WAF:
+            Web Application Firewall
+            Filters HTTP/HTTPS requests
+            WAF Can Block
+              malicious IPs
+              SQL injection
+              bad bots
+              suspicious requests
+          Shield vs WAF
+            | Service | Protects Against       |
+            | ------- | ---------------------- |
+            | Shield  | DDoS attacks           |
+            | WAF     | Malicious web requests |
+          Shield
+            👉 Big wall protecting building from crowd attack
+          WAF
+            👉 Security guard checking each visitor rules
+          Security Layers Concept
+            Shield → WAF → ELB → Application
+        Data Protection on AWS:
+          Data ကို unauthorized access ကနေကာကွယ်ဖို့
+          Main Method = Encryption
+            Encryption =
+            👉 Data ကို secret format ပြောင်းတာ
+            Without key:
+            ❌ cannot read
+            Plain Data → Encrypted Data → Unreadable Without Key
+          Two main types:
+            Data at Rest: Stored data encryption
+            Data in Transit: Data moving across network
+          AWS KMS:
+            AWS Key Management Service
+            Keys stay inside AWS
+              create keys
+              control keys
+              rotate keys
+              permissions management
+          Amazon Macie:
+            Macie = Finds sensitive data in S3 using ML
+              Detects
+                credit card numbers
+                personal information
+                sensitive documents, PII = Personally Identifiable Information
+          AWS Certificate Manager:
+            Manage SSL/TLS certificates
+            HTTPS encryption
+          Amazon Inspector:
+            Inspector = Vulnerability scanner
+            Finds
+              security vulnerabilities
+              outdated software
+              exposed risks
+          Amazon GuardDuty:
+            Intelligent threat detection
+            DETECTS:
+              unusual API calls
+              suspicious traffic
+              crypto mining attacks
+          Amazon Detective:
+            Detective = Investigate security incidents
+          AWS Security Hub
+            Central security dashboard
+            Collects Findings From
+              GuardDuty
+              Inspector
+              Macie
+              other tools
+            Single place:
+            👉 view all security alerts
+          Note:
+          | Scenario                   | Correct Service |
+          | -------------------------- | --------------- |
+          | Manage encryption keys     | KMS             |
+          | Find PII in S3             | Macie           |
+          | SSL certificates           | ACM             |
+          | Vulnerability scanning     | Inspector       |
+          | Threat detection           | GuardDuty       |
+          | Incident investigation     | Detective       |
+          | Central security dashboard | Security Hub    |
+      Monitoring and Compliance:
+        Security only မလုံလောက်ဘူး။
+        You also need to:
+          watch systems
+          detect problems
+          verify security
+          follow regulations
+        | Concept    | Meaning               |
+        | ---------- | --------------------- |
+        | Secure     | Protect systems/data  |
+        | Monitor    | Watch continuously    |
+        | Audit      | Review/check security |
+        | Compliance | Follow regulations    |
+        Flow:
+          Collect Metrics → Analyze → Detect Issues Early
+          eg: EC2 CPU overloaded: 👉 detect before app crashes.
+        AWS Monitoring Services
+          | Service         | Purpose                         |
+          | --------------- | ------------------------------- |
+          | CloudWatch      | Metrics & monitoring            |
+          | CloudTrail      | API activity logs               |
+          | Config          | Resource configuration tracking |
+          | Trusted Advisor | Best practice recommendations   |
+        Metrics vs Logs
+          | Type    | Meaning                |
+          | ------- | ---------------------- |
+          | Metrics | Numerical measurements |
+          | Logs    | Detailed event records |
+        Compliance:
+          Compliance = 👉 Following required standards/laws
+          Company systems/data must follow:
+            security rules
+            industry standards
+            legal requirements
+          Without compliance:
+            legal penalties
+            fines
+            security risks
+            reputation damage
+          | Scenario                   | Correct Idea |
+          | -------------------------- | ------------ |
+          | Continuous tracking        | Monitoring   |
+          | Review security activity   | Audit        |
+          | Follow regulations         | Compliance   |
+          | Numerical performance data | Metrics      |
+          | Detailed event history     | Logs         |
+          feature:
+            Artifact:
+              compliance documents portal
+              Example Reports
+                SOC reports
+                ISO certifications
+                PCI reports
+              Agreements: Manage legal agreements.
+              Reports: Access third-party audit reports.
+            AWS Config:
+              Tracks and evaluates AWS resource configurations
+            AWS Audit Manager:
+              Automates audit evidence collection
+            | Service       | Main Purpose                       |
+            | ------------- | ---------------------------------- |
+            | Artifact      | Download compliance reports        |
+            | Config        | Track/evaluate configurations      |
+            | Audit Manager | Automate audit evidence collection |
+          Note:
+            Company auditor က:
+              👉 “AWS က secure ဖြစ်ကြောင်း prove ပြပါ”
+              လို့တောင်းတယ်။
+              AWS Artifact ထဲက:
+                PCI report
+                ISO certificate
+                SOC report
+              တွေ download လုပ်ပြီးပြနိုင်တယ်။
+        Big Different:
+          | Service    | Main Purpose                 |
+          | ---------- | ---------------------------- |
+          | CloudWatch | Monitor performance & health |
+          | CloudTrail | Track user/API activity      |
+        CloudWatch:
+          Real-time monitoring service
+          Metrics: Numerical performance data from Sources(ec2, rds, lambda, etc..)
+          Alarms: trigger actions/notifications when threshold reached.
+          Dashboards: visual monitoring screen
+          Logs: Centralized logging(apps, servers, services, etc..)
+        AWS CloudTrail:
+          AWS account activity tracking service
+          Compliance auditing
+          user/API activity
+          Events: records of aws actions
+            free: 90 days event history
+          Logs: into S3 bucket
+          Insights: detects unusual API activity
+          Normally:
+            100 API calls/day
+            Suddenly:
+            50,000 API calls
+            👉 suspicious behavior alert
+      Governance & Multi-Account Management section:
+        AWS Organization:
+          AWS accounts အများကြီးကို:
+            centrally manage
+            organize
+            govern
+            လုပ်ဖို့ service ဖြစ်တယ်။
+          Governance:
+            Company rules/policies enforce လုပ်တာ
+            eg:
+              Company policy:
+                all accounts must use MFA
+                no public S3 buckets
+                approved services only
+        AWS Control Tower:
+          Quickly build secure governed multi-account AWS environment
+          AWS best-practice environment automatically setup လုပ်ပေးတာ
+          Features:
+            Dashboard:  see all accounts
+            Account factory: new account creation template
+            Controls(Guardrails): Rules/policies enforcement
+            Landing Zone: preconfigured multi-account aws environment
+        AWS Service Catalog:
+          Approved AWS resources catalog
+          Employees can only deploy:
+            ✅ approved resources
+        AWS License Manager:
+          Manage software licenses/Software license tracker
+          BYOL: Bring Your Own License
+        Note:
+          | Service         | Main Purpose                |
+          | --------------- | --------------------------- |
+          | Organizations   | Manage multiple accounts    |
+          | Control Tower   | Automated governance setup  |
+          | Service Catalog | Approved resource catalog   |
+          | License Manager | Software license management |
+      AWS Health:
+        AWS services health/status information service
+        AWS က:
+          service problems
+          outages
+          maintenance
+          account-specific issues
+          တွေကို notify လုပ်ပေးတာ
+        Different of CloudWatch and AWS Health:
+          | Service    | Purpose                           |
+          | ---------- | --------------------------------- |
+          | CloudWatch | Monitor YOUR resources            |
+          | AWS Health | AWS service/account health issues |
+          Easy Example:
+            CloudWatch
+            Tracks:
+            CPU usage
+            memory
+            app logs
+            👉 “Your EC2 unhealthy”
+
+            AWS Health
+            Tracks:
+            AWS infrastructure problems
+            AWS maintenance
+            👉 “AWS has issue in Tokyo Region”
+          Easy Real-Life Analogy
+            CloudWatch
+            👉 Car dashboard monitoring YOUR engine
+
+            AWS Health
+            👉 Toyota company notifying:
+            “Factory issue affecting your car model”
+      Trusted Advisor:
+        👉 AWS environment ကို best practices နဲ့ compare လုပ်ပြီး recommendations ပေးတဲ့ service
+        AWS account ကို:
+          cost
+          security
+          performance
+          fault tolerance
+          တွေမှာ problem ရှိလားဆိုတာ check လုပ်ပေးတယ်။
+          AWS Environment → Best Practice Checks → Recommendations
+        | Category          | Meaning              |
+        | ----------------- | -------------------- |
+        | Cost Optimization | Save money           |
+        | Performance       | Improve speed        |
+        | Security          | Find security risks  |
+        | Fault Tolerance   | Improve availability |
+        | Service Limits    | Monitor quotas       |
+      IAM Access Analyzer:
+        Analyze IAM permissions/access
+        to Least Privilege
+        Note:
+          Trusted Advisor = Overall AWS recommendations
+          Access Analyzer = Detailed IAM permission review
+      AWS Costs:
+        aws use Pay-As-You-Go.
+          Electricity bill လိုပဲ။ သုံးသလောက်ပဲပေး
+            use more → pay more
+            stop using → stop paying
+        three types:
+          | Type           | Meaning                          |
+          | -------------- | -------------------------------- |
+          | Always Free    | Never expires                    |
+          | 12 Months Free | Free for first year              |
+          | Trials         | Temporary short-term free offers |
+        Pricing Models:
+          On-Demand Pricing: Flexible pricing but, most expensive.
+            Use when needed.
+            No long-term commitment. 
+          Reserved Instances / Savings Plans:
+            Commit: 1 year OR 3 years
+            for cheaper pricing. up to ~72%
+          Spot Instances:
+            Unused AWS capacity sold at discount. up to 90%
+            AWS can terminate anytime.
+        Three Main Cost Drivers:     
+          | Driver        | Meaning         |
+          | ------------- | --------------- |
+          | Compute       | Server usage    |
+          | Storage       | Data stored     |
+          | Data Transfer | Network traffic |
+          Compute Cost: 
+            Pay for:
+              EC2 runtime
+              Lambda execution
+              containers
+            Important Detail
+              Stopped EC2:
+              ❌ no compute charges
+              BUT:
+              ⚠ EBS storage still charged
+          Storage Cost:
+            Pay for:
+              amount stored
+              storage class
+              S3:
+                Standard = expensive
+                Glacier = cheaper
+          Data Transfer Cost:
+            Inbound:
+              usually free, AWS ထဲဝင်လာတဲ့ data always free!
+            Outbound:
+              charged, AWS ကထွက်သွားတဲ့ data
+            eg: Users downloading from your website:
+              👉 outbound charges
+            Note:
+              INbound = INto AWS
+              OUTbound = OUT of AWS
+        AWS Organizations:
+          Multiple AWS accounts centrally manage လုပ်တာ
+          Multiple accounts bills: 👉 combined into one payment
+        Billing and Cost Management Dashboard:
+          Current AWS bills and payments center
+        Budgets:
+          Set spending limits and alerts
+        Cost Explorer:
+          Analyze spending trends visually
+        Pricing Calculator:
+          Estimate cost BEFORE deployment
+        Note:
+        | Service            | Key Purpose             |
+        | ------------------ | ----------------------- |
+        | Budgets            | Alerts                  |
+        | Cost Explorer      | Analyze + forecast      |
+        | Pricing Calculator | Pre-deployment estimate |
+        | Billing Dashboard  | Current bills           |
+        | Organizations      | Consolidated billing    |
+      AWS Support:
+        support plans: AWS technical help/support levels
+        Basic support:
+          Included FREE for all AWS users/ Self-service support
+          Includes
+            ✅ Documentation
+            ✅ Whitepapers
+            ✅ AWS re:Post (AWS re:Post = AWS question-answer website/ Q&A forum)
+            ✅ Basic Trusted Advisor checks
+          NOT Included
+            ❌ Technical support engineer access
+            ❌ TAM
+        Developer Support:
+          experimenting/testing/ “Help while building/testing”
+            | Issue Type       | Response   |
+            | ---------------- | ---------- |
+            | General guidance | < 24 hours |
+            | System impaired  | < 12 hours |
+        Business Support:
+          Recommended minimum for:
+            ✅ production workloads
+            | Issue Type          | Response  |
+            | ------------------- | --------- |
+            | Production impaired | < 4 hours |
+            | Production down     | < 1 hour  |
+        Enterprise On-Ramp:
+          business-critical workloads
+          < 30 minutes for critical issues
+          Pool of TAMs
+            (TAM = Technical Account Manager/ AWS expert advisor/contact person)
+        Enterprise Support:
+          Highest AWS support tier.
+          mission-critical workloads
+          < 15 minutes
+        Note:
+          | Plan               | Target Users         |
+          | ------------------ | -------------------- |
+          | Basic              | Beginners            |
+          | Developer          | Testing/dev          |
+          | Business           | Production workloads |
+          | Enterprise On-Ramp | Business criticaldd  |
+          | Enterprise         | Mission critical     |
+      AWS Marketplace:
+        AWS app/software store/software catelog
+        Vendors:
+          Third-party companies sell software there.
+        AWS Partner Network:
+          AWS certified partner companies network
+        Difference Between Marketplace and APN:
+          | Service     | Main Purpose                    |
+          | ----------- | ------------------------------- |
+          | Marketplace | Buy software                    |
+          | APN         | Work with AWS partner companies |
+      Cost Optimization:
+        reduce AWS spending efficiently
+          | Strategy             | Meaning                    |
+          | -------------------- | -------------------------- |
+          | Rightsizing          | choose correct resource size   |
+          | Spot Instances       | Use cheaper spare capacity |
+          | Auto Scaling         | Remove unused resources    |
+          | Proper Storage Class | Use cheaper storage        |
+          | Caching              | Reduce database workload   |
+        Compute Optimizer:
+          recommends better EC2 sizes.
+        Amazon RDS Optimization:
+          Read Replica:
+            copy database for read traffic.
+          Benefit
+            Heavy reads:
+            👉 handled by replicas
+            Primary DB:
+            👉 less overloaded
+            Instead of:
+              bigger expensive DB
+              Use:
+              ✅ multiple smaller read replicas
+            Flow:
+              Users
+                ↓
+              Read Queries
+                ↓
+              Read Replicas
+
+              Write Queries
+                ↓
+              Primary DB
+          Note:
+            Read Replica: performance scaling
+            Multi-AZ: high availability/disaster recovery
+        Amazon ElastiCache:
+          store frequently used data in memory
+        S3 Storage Classes:
+          Glacier deep archive
+            once or twice per year
+          S3 Intelligent-Tiering
+            Unknown/changing access patterns.
+        VPC Endpoints:
+          private connection to AWS services
+          Can reduce:
+            ✅ data transfer costs
+            especially for S3 access.
+      Cloud Migration:
+        company systems/data/apps
+        eg: from on-premise datacenter to AWS Cloud
+        Big companies:
+          ❌ don't move everything at once
+        Instead:
+        ✅ phase-by-phase migration
+        Migration 3 Phases:
+          Assess: “Should we migrate? Are we ready?”
+            Will AWS save money?
+            Which apps should migrate first?
+            How difficult is migration?
+            Main tool: Migration Evaluator
+              estimates migration cost/savings.
+              Migration Evaluator:
+                Analyzes:
+                  current servers
+                  workloads
+                  costs
+                  infrastructure usage
+
+                  Then estimates:
+                  ✅ AWS future cost
+                  ✅ savings
+                  ✅ migration readiness
+                  Note: AWS migration cost calculator + assessment tool
+          Mobilize: prepare organization/resources
+            main tool: 
+              AWS Application Discovery Service:
+                Automatically discovers:
+                  servers
+                  apps
+                  dependencies
+                Note: Discover on-premises servers and dependencies
+              AWS Migration Hub
+                central dashboard for migrations
+                project management dashboard
+                Note: it does NOT migrate itself mainly, it manages/tracks migrations
+          Migrate and Modernize:
+            actual migration phase
+            AWS Application Migration Service:
+              Migrates: servers/applications
+            AWS DMS:
+              migrate databases
+              Why Companies Migrate Databases?
+              Benefits:
+                lower cost
+                managed service
+                automatic backups
+                scalability
+                high availability
+              two migration types:
+                | Type          | Meaning                   |
+                | ------------- | ------------------------- |
+                | Homogeneous   | same database engine      |
+                | Heterogeneous | different database engine |
+                Homogeneous:
+                  MySQL → Amazon RDS for MySQL
+                  PostgreSQL → Aurora PostgreSQL
+                Heterogeneous:
+                  different database engine
+                    eg: Oracle (expensive) → PostgreSQL (open source)
+            AWS DataSync:
+              transfer large amounts of files/data
+            AWS Transfer Family:
+              Supports:
+                SFTP
+                FTPS
+                FTP
+            AWS Snow Family:
+              Snow Family = physical devices for huge data transfer
+                100TB data migration.
+                Instead of:
+                ❌ internet upload for months
+                AWS ships:
+                ✅ physical Snow device
+                Workflow:
+                  AWS → sends device(SnowBall, Snowcone) to you
+                  You → copy data into device
+                  You → send device back to AWS
+                  AWS → uploads data into your AWS storage
+            Note:
+              | Service                       | Best For              |
+              | ----------------------------- | --------------------- |
+              | DMS                           | Databases             |
+              | DataSync                      | Files                 |
+              | Snow Family                   | Huge offline transfer |
+              | Application Migration Service | Servers/apps          |
+          comparison of migration services:
+            | Service                       | Purpose                  |
+            | ----------------------------- | ------------------------ |
+            | Migration Evaluator           | cost/business assessment |
+            | Application Discovery Service | discover infrastructure  |
+            | Migration Hub                 | track migration          |
+            | Application Migration Service | move applications        |
+        AWS CAF:
+          CAF is AWS Cloud Adoption Framework
+          migration planning framework
+          Migration is NOT only technical.
+          Also involves:
+            business
+            people
+            security
+            operations
+          CAF 6 Perspectives:
+            | Perspective | Focus                   |
+            | ----------- | ----------------------- |
+            | Business    | Business goals          |
+            | People      | Employees/skills        |
+            | Governance  | Rules/processes         |
+            | Platform    | Technology/architecture |
+            | Security    | Protection/compliance   |
+            | Operations  | Day-to-day operations   |
+            short-term: BPGPSO
+        Well-Architected Framework:
+          AWS best practices guide for building:
+          Best Practice Checklist
+            6 Pillars:
+            | Pillar                 | Focus                    |
+            | ---------------------- | ------------------------ |
+            | Operational Excellence | run/manage systems well  |
+            | Security               | protect systems/data     |
+            | Reliability            | recover from failures    |
+            | Performance Efficiency | efficient performance    |
+            | Cost Optimization      | reduce waste/cost        |
+            | Sustainability         | environmental efficiency |
+        Seven Migration Strategies:
+          When company migrates to AWS: not all apps migrate same way.
+          | Strategy   | Meaning                      |
+          | ---------- | ---------------------------- |
+          | Relocate   | Move infrastructure location |
+          | Rehost     | Move without changes         |
+          | Replatform | Small optimizations          |
+          | Refactor   | Rewrite/re-architect         |
+          | Repurchase | Replace with SaaS            |
+          | Retain     | Keep as-is for now           |
+          | Retire     | Delete old systems           |
+          Relocate
+            move existing virtualized infrastructure to cloud
+            WITHOUT redesign.
+          Rehost
+            move application WITHOUT modifying it/ lift-and-shift
+            “Move application quickly with minimal changes”
+          Replatform
+            small cloud optimizations
+            WITHOUT changing core architecture/ lift-tinker-shift
+          Refactor
+            redesign/rewrite application for cloud-native architecture
+            Application code: modified heavily
+          Repurchase
+            replace old software with SaaS product
+            eg: on-premise CRM to Salesforce
+          Retain
+            keep application on-premise for now/ Keep it as-is
+          Retire
+            shut down unused applications
+          Comparison:
+            | Strategy   | Change Level          |
+            | ---------- | --------------------- |
+            | Relocate   | hosting location only |
+            | Rehost     | no app changes        |
+            | Replatform | small optimizations   |
+            | Refactor   | major redesign        |
+            | Repurchase | replace with SaaS     |
+            | Retain     | keep as-is            |
+            | Retire     | delete                |
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         Business Continuity Plan (BCP):
@@ -1328,7 +2429,7 @@ aws:
           MM Note:
             BCP ဆိုတာ business တစ်ခုမှာ unexpected problem (server down, data center ပျက်, network outage) ဖြစ်လာတဲ့အချိန်မှာ လုပ်ငန်းကို ဆက်လက် run နိုင်အောင် 
             ဘယ်လိုလုပ်မလဲဆိုတာရေးထားတဲ့ plan/document ဖြစ်ပါတယ်။
-          Recovery Point Objectgive(RPO):
+          Recovery Point Objective(RPO):
             the max acceptable amt of data loss after an unplanned data-loss incident, expressed as an amt of time.
             How much data are you willing to lose?
             RPO က data loss ကိုဘယ်လောက်ထိ ခွင့်ပြုမလဲ ဆိုတာကို ပြောတာပါ။
@@ -1399,6 +2500,13 @@ aws:
               · Nero zero loss
               . Mission Critical Services
               . Cost $$$$
+            Comparison:
+              | Strategy                 | RTO/RPO   | Cost |
+              | ------------------------ | --------- | ---- |
+              | Backup & Restore         | Hours     | $    |
+              | Pilot Light              | ~10 min   | $$   |
+              | Warm Standby             | Minutes   | $$$  |
+              | Multi-site Active/Active | Near zero | $$$$ |
         API:
           software that allows two apps/services to talk to each other.
           common type of api is via http/s requests.
@@ -1408,7 +2516,186 @@ aws:
           have both of a command-line shell and a scription language.
           PowerShell is built on top of .Net Common Lang Runtime(CLR), and accepts and returns .NET objects.
           via Cmdlets: a special type of cmd in PowerShell in form of capitalized verb-and-noun e.g. New-S3Bucket.
-        
-      
+        Higher Performance Computing Services:
+          The Nitro System:
+            a combination of dedicated hardware and lighteight hypervisor enabling faster innovation and enhanced security.
+            AWS Nitro System က AWS ရဲ့ modern EC2 infrastructure architecture ဖြစ်ပါတယ်။
+            👉 EC2 performance, security, scalability တိုးဖို့ AWS က design လုပ်ထားတာပါ။
+            1. Dedicated Hardware
+              AWS က networking, storage, security processing တွေကို
+              👉 Special hardware cards (Nitro Cards)
+              ဆီခွဲပေးထားတယ်။
+              ဒါကြောင့် main CPU က customer workload ပေါ်ကိုပို focus လုပ်နိုင်တယ်။
+            2. Lightweight Hypervisor
+              Hypervisor ဆိုတာ -
+              👉 Virtual machines (EC2 instances) run ဖို့ software layer
+              Nitro Hypervisor က lightweight ဖြစ်လို့:
+                Faster performance
+                Lower overhead
+                Better isolation
+              ရတယ်။
+            Why Nitro is important?
+              Before Nitro:
+                Hypervisor က resource ပိုသုံးတယ်
+              With Nitro:
+                More compute power for customers
+                Better security
+                Better networking speed
+                Better storage performance
+          Bare Metal Instance:
+            launch ec2 instance that have no hypervisor.
+            eg: M5 and R5 instances.
+            Bottlerocket:
+              a linux-based open-source operation system. running containers on vm or bare metal hosts.
+          Note:
+            High Performance Computing (HPC) ဆိုတာ
+              👉 အရမ်းကြီးမားတဲ့ computing power ကိုအသုံးပြုပြီး
+              👉 Normal computer နဲ့မဖြေရှင်းနိုင်တဲ့ complex problems တွေကို solve လုပ်တာပါ။
+              Core Idea
+                👉 Server တစ်လုံးမဟုတ်ဘူး
+                👉 Hundreds / thousands of servers တွေကို cluster အနေနဲ့ချိတ်ထားတယ်
+              ပြီးတော့ -
+                Fast network connection
+                Parallel processing
+                နဲ့အလုပ်လုပ်တယ်။
+              တချို့ problems တွေက:
+                Data အရမ်းကြီး
+                Computation အရမ်းများ
+                Processing time အရမ်းကြီးမားတဲ့
+              AWS ParallelCluster:
+                AWS ParallelCluster က
+                👉 HPC cluster တွေကို AWS ပေါ်မှာ
+                👉 Easy deploy + manage လုပ်နိုင်တဲ့ tool ဖြစ်တယ်။
+                ParallelCluster က automatically:
+                  EC2 instances create
+                  Networking setup
+                  Scheduler configure
+                  Cluster management
+                လုပ်ပေးတယ်။
+                👉 “Large-scale scientific computing” → HPC
+                👉 “Cluster management for HPC on AWS” → AWS ParallelCluster
+                👉 “Many servers working together” → HPC cluster
+        Edge Computing:
+          👉 Computing workload ကို
+          👉 Main cloud/datacenter ထဲမှာမ run ဘဲ
+          👉 User/device နားနီးတဲ့နေရာမှာ run လုပ်တာ
+          ဖြစ်ပါတယ်။
+        Hybrid Computing:
+          👉 Workloads ကို
+          On-premise datacenter
+          AWS Cloud (VPC)
+          နှစ်ခုလုံးမှာ run လုပ်နိုင်တာ
+        AWS Outposts:
+          👉 AWS servers rack ကို
+          👉 Your datacenter ထဲမှာ install လုပ်တာ
+          👉 AWS APIs/services ကို local datacenter ထဲမှာသုံးနိုင်
+        AWS Wavelength:
+          👉 Telecom company datacenter ထဲမှာ application run
+          👉 5G network နားကပ် run လို့ ultra-low latency ရတယ်
+        VMware Cloud on AWS:
+          👉 On-prem VMware workloads ကို AWS နဲ့ integrate
+          👉 Existing VMware environments migrate လုပ်ဖို့ကောင်း
+          📌 Requires VMware virtualization
+        AWS Local Zones:
+          AWS Region အပြင်ဘက် populated cities တွေမှာရှိတဲ့ edge datacenters
+          👉 Users နားကပ် compute/storage/database services ပေးတယ်
+        Note:
+          👉 “Ultra-low latency + 5G” → AWS Wavelength
+          👉 “AWS rack in your datacenter” → AWS Outposts
+          👉 “VMware integration” → VMware Cloud on AWS
+          👉 “AWS services closer to cities” → AWS Local Zones
+      Cost & Capacity Management:
+        1. Cost Management
+          Meaning
+          👉 “How do we save money?”
+          AWS services သုံးတဲ့အခါ:
+          unnecessary cost လျော့
+          efficient resource usage
+          cheaper pricing models
+          ကိုစဉ်းစားတာ
+        2. Capacity Management
+          Meaning
+          👉 “Traffic/user demand တက်လာရင် ဘယ်လို handle လုပ်မလဲ?”
+          ဥပမာ:
+          Website users suddenly increase
+          More servers needed
+          Scale up / scale out
+          EC2 Pricing Options:
+          1. Spot Instances
+            👉 Unused EC2 capacity ကို discount နဲ့ရ
+            💰 Very cheap
+            ⚠️ AWS can interrupt anytime
+            Use cases:
+              AWS Batch:
+                Batch jobs automatically: eg: Large processing jobs.
+          2. Reserved Instances (RI):
+            👉 1-year / 3-year contract commit
+            💰 Cheaper than On-Demand
+            Good for:
+            Predictable workloads
+          3. Savings Plans:
+            👉 Flexible pricing discount model
+            Commit usage
+            Lower cost
+            More flexible than RI
+          AWS Compute Optimizer: ML analyze usage history
+                Reduce cost
+                Improve performance
+              recommend လုပ်ပေးတယ်
+          EC2 Auto Scaling Groups (ASG):
+            Automatically add/remove EC2 servers
+          Elastic Load Balancer (ELB):
+            Traffic distribute across multiple EC2 instances
+            If one server unhealthy:
+              reroute to healthy servers
+          AWS Elastic Beanstalk:
+            👉 Easy web app deployment
+            Developer က:
+              Server setup
+              Scaling
+              Load balancer
+            စိတ်မပူရဘူး
+            AWS handles infrastructure
+          Note:
+            | Service           | Purpose              |
+            | ----------------- | -------------------- |
+            | Spot              | Cheapest EC2         |
+            | Reserved          | Long-term discount   |
+            | Savings Plans     | Flexible savings     |
+            | Batch             | Batch workloads      |
+            | Compute Optimizer | Cost recommendations |
+            | ASG               | Auto scaling         |
+            | ELB               | Traffic distribution |
+            | Elastic Beanstalk | Easy deployment      |
+          Storage Types:
+            3 types are have.
+              Block Storage
+                👉 Virtual Hard Disk လိုမျိုး
+                EC2 instance တစ်ခုမှာ directly attach လုပ်ပြီးသုံးတယ်
+              File Storage
+                👉 Shared network drive လိုမျိုး
+                Multiple EC2 instances တွေက same files ကို access လုပ်နိုင်တယ်
+              Object Storage
+                Amazon S3
+                👉 Internet-scale object storage
+                Data ကို:
+                  Object
+                  Metadata
+                  Unique ID
+                နဲ့သိမ်းတယ်
+              Note Compparison:
+                | Storage | AWS Service | Best For               |
+                | ------- | ----------- | ---------------------- |
+                | Block   | EBS         | EC2 hard drive         |
+                | File    | EFS         | Shared files           |
+                | Object  | S3          | Internet-scale storage |
+              Technical Compparison:
+                | Feature       | EBS     | EFS     | S3                  |
+                | ------------- | ------- | ------- | ------------------- |
+                | Type          | Block   | File    | Object              |
+                | Shared access | No      | Yes     | Yes                 |
+                | Attach to EC2 | Direct  | Network | API/Web             |
+                | Scalability   | Limited | Large   | Virtually unlimited |
+                | File locking  | N/A     | Yes     | No                  |
 
-
+              

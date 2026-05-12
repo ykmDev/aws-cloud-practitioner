@@ -1,0 +1,359 @@
+1. Which AWS service should be selected when the requirement is to enable asynchronous processing 
+where producer applications can continue operating even when consumer applications are temporarily unavailable or 
+experiencing processing delays? 
+ a.
+AWS Step Functions with Express Workflows for coordinating distributed service calls
+ b.
+Amazon Kinesis Data Streams for real-time data ingestion and processing
+ c.
+Amazon EventBridge with custom event buses for routing messages to multiple targets
+ d.
+Amazon SQS
+
+ans: Amazon SQS
+--------------
+2. What financial implications exist for AWS customers when the Trust and Safety team conducts investigations into potential Acceptable Use Policy violations originating from their account resources? 
+ a.
+Customers receive a prorated credit on their monthly bill proportional to the duration of the investigation period
+ b.
+There are administrative service charges that scale based on the severity level of the policy violation discovered
+ c.
+Investigation costs are billed as a percentage of the monthly spend on the affected resources under review
+ d.
+There are no additional fees or charges for Trust and Safety team investigations and enforcement activities
+
+financial implications => ငွေကြေးဆိုင်ရာ သက်ရောက်မှုများ
+--------------
+3. Which AWS service should be implemented to detect compromised instances communicating 
+with malicious domains using DNS query analysis and network traffic pattern monitoring?
+a.
+Amazon Macie combined with VPC Flow Logs analysis
+ b.
+AWS Security Hub for centralized detection findings
+ c.
+Amazon Inspector for runtime behavior assessment
+ d.
+Amazon GuardDuty
+
+ans: Amazon GuardDuty
+--------------
+4. Which AWS service provides pre-trained deep learning models for analyzing visual content including facial detection, 
+object recognition, and activity identification in both static images and streaming video?
+ a.
+Amazon SageMaker with custom computer vision models trained on labeled datasets
+ b.
+Amazon Rekognition
+ c.
+Amazon Comprehend Medical for visual analysis and pattern recognition
+ d.
+AWS Lambda combined with Amazon Textract for visual content processing
+
+ans: Amazon Rekognition
+--------------
+5. Which of the following are benefits of migrating to the AWS Cloud? (Choose two.)
+
+A. Operational resilience Most Voted
+B. Discounts for products on Amazon.com
+C. Business agility Most Voted
+D. Business excellence
+E. Increased staff retention
+
+Operational resilience = 👉 system failures/problems ဖြစ်လာရင်တောင် business continue run နိုင်စွမ်း။
+Business agility = 👉 business changes/new ideas ကို မြန်မြန် implement လုပ်နိုင်ခြင်း။
+--------------
+6. Which AWS services or features provide disaster recovery solutions for Amazon EC2 instances? (Choose two.)
+
+A. ׀•׀¡2 Reserved Instances
+B. EC2 Amazon Machine Images (AMIs)
+C. Amazon Elastic Block Store (Amazon EBS) snapshots
+D. AWS Shield
+E. Amazon GuardDuty
+
+ans: B,C
+AMI = 👉 full template/image of EC2 instance.
+Snapshot =👉 backup copy of EBS volume.
+--------------
+7. A company is migrating to the AWS Cloud instead of running its infrastructure on premises.
+Which of the following are advantages of this migration? (Choose two.)
+
+A. Elimination of the need to perform security auditing
+B. Increased global reach and agility
+C. Ability to deploy globally in minutes
+D. Elimination of the cost of IT staff members
+E. Redundancy by default for all compute services
+ans. B.C
+--------------
+8. A company wants to migrate a critical application to AWS. The application has a short runtime. 
+The application is invoked by changes in data or by shifts in system state. 
+The company needs a compute solution that maximizes operational efficiency and minimizes the cost of running the application.
+Which AWS solution should the company use to meet these requirements?
+
+A. Amazon EC2 On-Demand Instances
+B. AWS Lambda
+C. Amazon EC2 Reserved Instances
+D. Amazon EC2 Spot Instances
+
+ans: B.
+--------------
+9. Which AWS service or feature can a company use to determine which business unit is using specific AWS resources?
+
+A. Cost allocation tags
+B. Key pairs
+C. Amazon Inspector
+D. AWS Trusted Advisor
+
+ans: A.
+
+Tags =
+👉 labels attached to AWS resources.
+Because:
+AWS billing reports can:
+✅ group costs using tags
+--------------
+10. A company wants to migrate its workloads to AWS, but it lacks expertise in AWS Cloud computing.
+Which AWS service or feature will help the company with its migration?
+
+A. AWS Trusted Advisor
+B. AWS Consulting Partners
+C. AWS Artifacts
+D. AWS Managed Services
+
+AWS Consulting Partners = AWS-certified partner companies
+--------------
+11. Which AWS service or tool should a company use to centrally request and track service limit increases?
+
+A. AWS Config
+B. Service Quotas
+C. AWS Service Catalog
+D. AWS Budgets
+
+ans. B
+
+eg:
+New AWS account may allow only: 5 EC2 instances, You try launch:6th EC2 instance
+AWS says:
+❌ limit exceeded
+then Need:
+quota increase request
+using: AWS Service Quota
+
+default limit of VPC: 5 VPCs per Region
+--------------
+12. A company has a centralized group of users with large file storage requirements that have exceeded the space available on premises. The company wants to extend its file storage capabilities for this group while retaining the performance benefit of sharing content locally.
+What is the MOST operationally efficient AWS solution for this scenario?
+
+A. Create an Amazon S3 bucket for each user. Mount each bucket by using an S3 file system mounting utility.
+B. Configure and deploy an AWS Storage Gateway file gateway. Connect each user’s workstation to the file gateway.
+C. Move each user’s working environment to Amazon WorkSpaces. Set up an Amazon WorkDocs account for each user.
+D. Deploy an Amazon EC2 instance and attach an Amazon Elastic Block Store (Amazon EBS) Provisioned IOPS volume. Share the EBS volume directly with the users.
+
+ans. B.
+AWS Storage Gateway: on-premises environment ↔ AWS cloud storage
+File Gateway:
+✅ stores files in Amazon S3
+✅ presents local file share interface
+
+Need:
+
+extend storage
+keep local performance
+operational efficiency
+
+🔥 perfect File Gateway use case
+--------------
+13.Which option is a customer responsibility when using Amazon DynamoDB under the AWS Shared Responsibility Model?
+
+A. Physical security of DynamoDB
+B. Patching of DynamoDB
+C. Access to DynamoDB tables
+D. Encryption of data at rest in DynamoDB
+
+14. A company wants to run a NoSQL database on Amazon EC2 instances.
+Which task is the responsibility of AWS in this scenario?
+
+A. Update the guest operating system of the EC2 instances.
+B. Maintain high availability at the database layer.
+C. Patch the physical infrastructure that hosts the EC2 instances.
+D. Configure the security group firewall.
+
+ans: C.
+
+-------------
+14.A company wants to manage deployed IT services and govern its infrastructure as code (IaC) templates.
+Which AWS service will meet this requirement?
+
+A. AWS Resource Explorer
+B. AWS Service Catalog
+C. AWS Organizations
+D. AWS Systems Manager
+
+AWS Service Catalog: approved infrastructure templates
+Employees can deploy ONLY those approved templates.
+
+Real Example:
+IT team creates approved:
+EC2 templates
+VPC templates
+RDS templates
+
+using:
+CloudFormation
+Terraform-like IaC concepts
+Developers Can:
+✅ deploy approved templates easily
+BUT:
+❌ cannot create random insecure infrastructure
+---------------
+15. A company is using a central data platform to manage multiple types of data for its customers. The company wants to use AWS services to discover, transform, and visualize the data.
+Which combination of AWS services should the company use to meet these requirements? (Choose two.)
+
+A. AWS Glue
+B. Amazon Elastic File System (Amazon EFS)
+C. Amazon Redshift
+D. Amazon QuickSight
+E. Amazon Quantum Ledger Database (Amazon QLDB)
+
+ans: A,D.
+| Requirement               | AWS Service |
+| ------------------------- | ----------- |
+| discover & transform data | AWS Glue    |
+| visualize data            | QuickSight  |
+Amazon EFS = shared file storage.
+Amazon Redshift = analytics data warehouse.
+------------
+A developer wants to deploy an application quickly on AWS without manually creating the required resources.
+Which AWS service will meet these requirements?
+
+A. Amazon EC2
+B. AWS Elastic Beanstalk
+C. AWS CodeBuild
+D. Amazon Personalize
+ans: B.
+---------
+Which AWS service provides the ability to manage infrastructure as code?
+
+A. AWS CodePipeline
+B. AWS CodeDeploy
+C. AWS Direct Connect
+D. AWS CloudFormation
+ans: D.
+--------------
+A company has an AWS account. The company wants to audit its password and access key rotation details for compliance purposes.
+Which AWS service or tool will meet this requirement?
+
+A. IAM Access Analyzer
+B. AWS Artifact
+C. IAM credential report
+D. AWS Audit Manager
+ans: C.
+----------
+What is the benefit of AWS Organizations consolidated billing?
+
+Automatic cost optimization
+Volume discounts across all accounts
+Free data transfer between accounts
+Automatic Reserved Instance purchases
+ans: 
+----------------
+What is Amazon VPC?
+
+A content delivery network
+A virtual private network service
+A logically isolated section of the AWS Cloud
+A domain name system service
+----------------
+What is Amazon Athena used for?
+
+Running serverless functions
+Querying data in S3 using SQL
+Storing relational data
+Machine learning model training
+----------------
+Which AWS service provides threat detection by analyzing AWS CloudTrail events, VPC Flow Logs, and DNS logs?
+
+Amazon Inspector
+Amazon GuardDuty
+AWS Shield
+AWS WAF
+----------------
+Where can you find information about AWS service limits?
+
+AWS Billing Console
+AWS Trusted Advisor
+AWS Cost Explorer
+AWS Marketplace
+----------------
+What is the purpose of AWS Key Management Service (KMS)?
+
+To manage SSH keys for EC2 instances
+To create and control encryption keys
+To manage IAM user passwords
+To rotate database credentials
+----------------
+Which pillar of the AWS Well-Architected Framework includes the principle of implementing a strong identity foundation?
+
+Operational Excellence
+Security
+Cost Optimization
+Sustainability
+----------------
+Which of the following represent benefits of cloud economics? (Select TWO)
+
+Convert fixed costs to variable costs
+Increase data center investment
+Eliminate the need to guess capacity
+Maintain excess capacity for peak loads
+Increase IT staff to manage cloud infrastructure
+----------------
+What type of encryption does AWS KMS provide for data stored in supported AWS services?
+
+Encryption in transit only
+Encryption at rest only
+Both encryption at rest and in transit
+Client-side encryption only
+
+AWS KMS =
+👉 service for creating and managing encryption keys.
+KMS mainly helps:
+✅ encrypt stored data
+Meaning:
+🔥 Encryption at Rest
+----------------
+What is AWS Config used for?
+
+Managing IAM user passwords
+Tracking resource inventory and changes
+Encrypting data at rest
+Monitoring application logs
+----------------
+Which service provides text-to-speech capabilities?
+
+Amazon Polly
+Amazon Transcribe
+Amazon Comprehend
+Amazon Translate
+----------------
+Which EC2 instance purchasing option provides the most cost savings for steady-state workloads?
+
+On-Demand Instances
+Spot Instances
+Reserved Instances
+Dedicated Hosts
+----------------
+Which of the following are benefits of the AWS Cloud? (Select TWO)
+
+Trade capital expense for variable expense
+Maintain physical servers in your data center
+Benefit from massive economies of scale
+Increase time to market for new applications
+Require long-term contracts for all services
+----------------
+Which service provides automated security assessments to help improve security and compliance?
+
+Amazon Inspector
+AWS CloudTrail
+Amazon GuardDuty
+AWS WAF
+----------------
+----------------
+----------------
