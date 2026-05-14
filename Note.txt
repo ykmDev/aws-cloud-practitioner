@@ -779,6 +779,16 @@ aws:
                       user နဲ့ web application ကြားမှာ fastest network path ကိုရှာပေးတဲ့ service ဖြစ်
                   AWS Direct Connect:
                     AWS Direct Connect is a private/dedicated connection between your datacenter, office, co-location and AWS.
+                  AWS Site-to-Site VPN:
+                    Company office က server/network တွေကို:
+                      ✅ AWS cloud နဲ့ securely ချိတ်ချင်တယ်
+                      BUT:
+                      ❌ dedicated private cable မတပ်ချင်
+                      ❌ setup အမြန်လိုချင်
+                      Use:
+                      ✅ AWS Site-to-Site VPN
+                  AWS Client VPN:
+                    Managed VPN for individual remote users. OpenVPN-based.
         EC2:
           Instances types:
             General Purpose
@@ -1245,6 +1255,43 @@ aws:
                   C. They control traffic for specific EC2 instances
                   D. They deny all outbound traffic by default
                   Correct ans: C.
+                  Security Group
+                  Security Group = EC2 instance firewall
+                  Protects:
+                    EC2 instance
+                    ENI (Elastic Network Interface)
+                    Stateful Meaning
+                    🔥 VERY IMPORTANT
+                    Stateful = return traffic automatically allowed
+                    Example
+                    You allow:
+                    Inbound HTTP 80
+                    User opens website.
+                    Response traffic back to user:
+                    ✅ automatically allowed
+                    No need separate outbound rule.
+              Network ACL (NACL)
+                  Amazon Virtual Private Cloud
+                  NACL = subnet-level firewall
+                  Subnet Level Meaning
+                  Protects:
+                  🔥 entire subnet
+                  Not individual EC2.
+                  Example
+                  Subnet contains:
+                    Web server
+                    App server
+                    DB server
+              Summary:
+                NACL filters traffic for whole subnet.
+                | Question Keyword  | Likely Answer  |
+                | ----------------- | -------------- |
+                | instance firewall | Security Group |
+                | subnet firewall   | NACL           |
+                | stateful          | Security Group |
+                | stateless         | NACL           |
+                | allow only        | Security Group |
+                | allow + deny      | NACL           |
             Global Networking:
               user တွေဘယ်နိုင်ငံကဝင်ဝင် application ကိုမြန်မြန်နဲ့ reliable ဖြစ်အောင် route လုပ်ပေးတဲ့ networking services
               DNS:
@@ -2232,10 +2279,43 @@ aws:
           S3 Intelligent-Tiering
             Unknown/changing access patterns.
         VPC Endpoints:
+          WITHOUT using public internet
           private connection to AWS services
           Can reduce:
             ✅ data transfer costs
             especially for S3 access.
+              Without endpoint:
+              EC2 → NAT → Internet → S3
+              With endpoint:
+              EC2 → VPC Endpoint → S3
+              All private.
+              Huge cost savings because:
+                ❌ NAT Gateway data charges reduced
+        VPC Peering:
+          Private connectivity between two VPCs
+          ✅ AWS internal network ထဲမှာပဲသွား
+          ❌ public internet မသုံး
+          Not transitive.
+          What is Transitive?
+          eg:
+            Suppose:
+              VPC-A ↔ VPC-B
+              VPC-B ↔ VPC-C
+              Question:
+              Can VPC-A automatically access VPC-C?
+              ❌ NO
+              Because:
+              🔥 VPC Peering is NOT transitive.
+            Peering Problem
+              Many VPCs:
+              A ↔ B
+              A ↔ C
+              A ↔ D
+              B ↔ D
+              Too many connections.
+              Messy.
+              Solution is using AWS Transit Gateway
+              AWS Transit Gateway: central router hub
       Cloud Migration:
         company systems/data/apps
         eg: from on-premise datacenter to AWS Cloud
