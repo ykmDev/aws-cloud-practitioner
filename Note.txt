@@ -943,7 +943,6 @@ aws:
                   Desired = 2
                   Maximum = 10
                   2≤Instances≤10
-
                   ဒီ setup မှာ normal အချိန် 2 instances run မယ်။
                   Traffic တက်လာရင် Auto Scaling က 3, 4, 5 instance ဖြစ်အောင်တိုးမယ်။
                   အများဆုံး 10 instances ထိပဲတိုးနိုင်မယ်။
@@ -1428,6 +1427,14 @@ aws:
                     Accessed 1-2x per year. Retrieval: minutes to hours.
                   Glacier Deep Archive:
                     Long-term storage (7-10+ years). Lowest cost. 12-hour retrieval.
+                Storage Gateway:
+                  a hybrid cloud storage service that extends your on-premise storage to cloud
+                File Gateway:
+                  extend you local storage to AWS s3.
+                Volumn Gateway:
+                  caches your local drives to s3
+                AWS Backup:
+                  fully managed backup service
         Amazon EFS:
           a fully managed, scalable file storage service using the NFS protocol.
           automatically scales to petabytes and allows multiple EC2 instances 
@@ -2482,13 +2489,194 @@ aws:
             | Repurchase | replace with SaaS     |
             | Retain     | keep as-is            |
             | Retire     | delete                |
+    Some Note:
+    IPS = 👉 network attack တွေ detect + block လုပ်တဲ့ security appliance/software
 
+    AWS DMS: can be used to migrate data from an on-premises database to a database in AWS
+      AWS DMS does not migrate the actual server to an EC2 instance.
+    Migration Hub:
+      Migration Hub is a service that helps plan and track application migrations.
+    AWS MGN:
+      AWS MGN is an automated lift-and-shift solution.
+    Application Discovery Service:
+      Application Discovery Service collects information about the usage and 
+      configuration of on-premises servers to help plan a migration to AWS.
+    Trusted Advisor checks security groups for rules that allow unrestricted access to a resource. 
+      Unrestricted access increases opportunities for malicious activity, such as hacking, denial-of-service attacks, or loss of data. 
 
+    Amazon S3 is not a global file system. Amazon S3 is an object storage service.
+    Amazon S3 is a durable object storage service.
+      because: S3 provides:
+        99.999999999%
+        durability.
+        Called:
+        🔥 “11 nines durability”
+      Durability
+        Means:
+        ✅ data survives
 
+      Availability
+        Means:
+        ✅ service accessible right now
+     ACM is a service that is used to create, store, and renew public and private SSL/TLS certificates. 
+      You can use ACM to implement encryption in transit and at rest by using a protocol, such as TLS.
+      AWS RAM is a service that is used to share resources across your AWS accounts
+      Security Hub to check your AWS environment against security industry standards and best practices.
 
-
-          
-
+      Which AWS service identifies security groups that allow unrestricted access to a user's AWS resources?
+        ans: aws trusted advisor
+    Which AWS service offers intelligent threat protection by continuously monitoring for malicious activity and unauthorized behavior in your account?
+      ans: amazon GuardDuty
+    Which AWS service is primarily used to cache static and dynamic content to reduce access latency for global users?
+      ans: Amazon CloudFront
+    Which tool allows automating AWS account creation and applying baseline security policies using a predefined configuration?
+      ans: AWS Control Tower
+    Which service helps protect the identity of your web and mobile application users (authentication, sign-up, sign-in)?
+      ans: Amazon Cognito.
+      Amazon Cognito provides a user directory that scales to millions of users. It enables you to add sign-up, sign-in, and access control to web and mobile apps.
+    Which migration tool is used to transfer large datasets to S3 over the Internet faster?
+      ans: Amazon S3 Transfer Acceleration.
+    According to the Well-Architected Framework, which pillar includes the ability to use computing resources efficiently to meet system requirements?
+      ans: Performance Efficiency
+    Which AWS service is used for audit logging of actions taken in the account?
+      ans: AWS CloudTrail.
+    Which service provides automatic protection against DDoS attacks for all AWS customers at no additional cost?
+      ans:AWS Shield Standard
+        AWS Shield Standard : is automatically activated for all AWS customers and 
+        protects against the most common network and transport layer DDoS attacks.
+    Which tool provides a personalized dashboard with the status of AWS services affecting your resources?
+      ans: AWS Personal Health Dashboard.
+    Which service allows hosting private Git repositories on AWS?
+      ans: AWS CodeCommit.
+      AWS CodeCommit is a secure and scalable source control service that hosts private Git repositories.
+      AWS CodeBuild is incorrect because it is for compiling code.
+      AWS CodeDeploy is incorrect because it is for deploying applications.
+      AWS CodePipeline is incorrect because it is for orchestrating continuous delivery.
+    Which AWS service is used to route end-user traffic to Internet applications and also performs health checks?
+      ans: Amazon CloudFront.
+      Amazon Route 53 is a scalable DNS (Domain Name System) service that translates domain names into IP addresses and can route traffic based on resource health.
+    Which service is used to decouple distributed systems by sending push notifications to multiple subscribers?
+      ans: SNS.
+    Which AWS service is used to manage in-memory caching to improve database performance?
+      ans: ElastiCache
+    Which AWS service is used for patch management on EC2 instances and on-premises servers?
+      ans:AWS Systems Manager.
+      AWS Systems Manager (specifically the Patch Manager feature) automates the process of patching managed instances with both security related and other types of updates.
+    Which AWS service is used for secure file transfer (SFTP, FTPS, FTP) directly into and out of Amazon S3?
+      ans: AWS Transfer Family.
+    Which AWS service helps developers build, test, and deploy applications quickly using DevOps practices?
+      ans: AWS CodeStar.
+      AWS CodeStar allows you to quickly set up the entire continuous delivery toolchain (CI/CD) to code, build, test, and deploy application code. 
+      It unifies CodeCommit, CodeBuild, CodePipeline, and CodeDeploy.
+    Which AWS service helps protect your applications against Distributed Denial of Service (DDoS) attacks?
+      ans: AWS Shield
+    Which cloud design principle recommends scaling horizontally instead of vertically?
+      ans: Elasticity
+      Elasticity allows adding more resources (scaling horizontally/out) to handle load rather than making a single resource larger (scaling vertically/up), 
+      which has physical limits. This matches capacity to demand.
+    Which AWS service offers fully managed quantum computing?
+      ans: Amazon braket
+      Amazon Braket is a fully managed quantum computing service that helps researchers and developers get started with quantum technology.
+    Which AWS service is used for processing large volumes of data (Big Data) using the Hadoop framework?
+      ans: Amazon EMR
+      Amazon EMR (Elastic MapReduce) is the industry-leading cloud big data platform for data processing, interactive analysis, and machine learning using open-source frameworks such as Apache Hadoop and Spark.
+    Which AWS Support plan includes access to an 'AWS Support Concierge' team for billing and account assistance?
+      ans: Enterprise On-Ramp and Enterprise.
+      The Support Concierge team is an exclusive benefit of the Enterprise levels (including On-Ramp). They are billing and account experts, not technical.
+    What are TWO pillars of the AWS Well-Architected Framework? (Select TWO)
+      6 pillars are: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, and 
+      Sustainability.
+    Which block storage service attaches to EC2 instances?
+      ans: Amazon Elastic Block Store (EBS).
+    Which security service uses machine learning to detect threats in your AWS account?
+      ans: Amazon GuardDuty.
+      Amazon GuardDuty is an intelligent threat detection service that uses ML to analyze logs.
+    Which AWS service is used for continuous delivery and software release automation (CI/CD)?
+      ans: AWS CodePipeline.
+      AWS CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines 
+      for fast and reliable application and infrastructure updates.
+    Which AWS service helps collect, visualize, and analyze logs from various sources?
+      ans: cloudwatch logs
+      Amazon CloudWatch Logs enables you to centralize the logs from all of your systems, applications, and AWS services in a single highly scalable service.
+    Which disaster recovery strategy has the lowest cost but the highest Recovery Time Objective (RTO)?
+      ans: Backup and Restore
+    Which service allows running code without provisioning or managing servers?
+      ans: AWS Lambda.
+      AWS Lambda is a compute service that lets you run code without provisioning or managing servers (Serverless). You pay only for the compute time you consume.
+    Which AWS service is used for visual workflow orchestration for distributed applications?
+      ans: AWS Step Functions.
+      AWS Step Functions is a serverless function orchestrator that makes it easy to sequence AWS Lambda functions and multiple AWS services into business-critical applications using visual workflows.
+    Which AWS service helps protect web applications against common web exploits and bots?
+      ans: aws WAF
+      AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits and bots that may affect availability, 
+      ❌AWS Shield is DDoS protection.
+      ❌Amazon Inspector is vulnerability assessment.
+      ❌Amazon GuardDuty is threat detection.
+    Which AWS service is used for low-latency content delivery?
+      ans:  Amazon CloudFront.
+      AWS Global Accelerator is network optimization (transport), not content caching.
+    Under the AWS Shared Responsibility Model, which of the following tasks is the SOLE responsibility of the customer?
+      ans: Patch management of the Guest OS.
+    A company needs a dedicated Technical Account Manager (TAM) to assist with architecture and operational management. Which AWS Support plan should they choose?
+      ans: Enterprise plan
+      The Enterprise plan is the only support tier that includes a designated Technical Account Manager (TAM), who acts as a primary point of contact and strategic advisor.
+    A company has a workload that is fault-tolerant and flexible regarding when it runs. Which Amazon EC2 purchasing option offers the greatest cost savings?
+      ans: Spot Instances.
+    Which AWS service helps customers estimate the cost of migrating their on-premises workloads to AWS?
+      ans:AWS Total Cost of Ownership (TCO) Calculator
+    Which cloud concept refers to the ability to acquire resources as you need them and release them when they are no longer required?
+      ans: Elastic
+    A security auditor requests a list of all IAM users in your account and the status of their credentials (passwords, access keys, MFA). Which tool provides this information?
+      ans: IAM Credential Report
+    An application needs to be available even if a natural disaster affects an entire geographic region. Which architectural strategy should be used?
+      ans: Deploy the application across multiple AWS Regions.
+    Which service centrally manages access and permissions for multiple AWS accounts, allowing you to sign in to all of them from one place (Single Sign-On)?
+      ans: AWS IAM Identity Center (formerly AWS SSO).
+    Which AWS services are considered 'Serverless'? (Select TWO)
+      ans: AWS Lambda and Amazon DynamoDB.
+    A company needs to run AWS infrastructure and services (such as EC2 and RDS) within their own on-premises data center to meet low-latency requirements. Which service should they use?
+      ans: AWS Outposts
+    Which AWS services are commonly used to decouple components of distributed applications? (Select TWO)
+      ans: SNS, SQS
+    Which service provides developers and business users a fast and easy way to create visualizations, dashboards, and reports from their data in AWS?
+      ans: Amazon QuickSight
+    A company wants to focus on its core business and reduce the overhead of managing physical data centers. Which AWS cloud design principle does this refer to?
+      ans: Stop spending money on undifferentiated heavy lifting.
+      'Undifferentiated heavy lifting' refers to the hard and expensive tasks that do not add differential value to your business (like buying servers, cooling, physical security, patching racks). AWS handles this so you can focus on your application.
+    Which service allows data scientists and developers to quickly build, train, and deploy machine learning models?
+      ans: Amazon SageMaker.
+    Which service provides secure cloud-based desktops (VDI) to allow employees to work from anywhere?
+      ans: Amazon WorkSpaces.
+    A company wants to improve the read performance of their database by adding an in-memory caching layer. Which service should they use?
+      ans: ElasticCache
+    In AWS Organizations, what type of policy is used to restrict the services and actions that member accounts can perform (e.g., prohibiting the use of Redshift in all development accounts)?
+      ans: service control list
+    A company needs protection against Distributed Denial of Service (DDoS) attacks for its web applications. Which AWS services offer this protection? (Select TWO)
+      ans: AWS Shield, WAF
+    Which service handles user authentication for mobile and web apps, allowing sign-in with social providers (Google, Facebook, Amazon)?
+      ans: Amazon Cognito
+    Does a customer need prior authorization from AWS to perform penetration testing on their own EC2 instances?
+      ans: No, for most common services.
+      Historically permission was required, but now AWS allows customers to conduct security assessments or penetration tests 
+      against selected services (EC2, RDS, CloudFront, Aurora, API Gateway, Lambda, Lightsail, Elastic Beanstalk) without prior approval.
+    Which pillar of the Well-Architected Framework focuses on the ability to run workloads effectively, gain insight into operations, and continuously improve supporting processes and procedures?
+      ans: Operational Excellence
+    Which of the following is best suited for load balancing Transmission Control Protocol (TCP), User Datagram Protocol (UDP), and Transport Layer Security (TLS) traffic and has the capability of handling millions of requests per second while maintaining ultra-low latencies?
+      ans: 
+    Which of the following is true on how AWS lessens the time to provision your IT resources?
+      It provides an AI-powered IT ticketing platform for fulfilling resource requests.
+      It provides various ways to programmatically provision IT resources.
+      It provides an automated system of requesting and fulfilling IT resources from third-party vendors.
+      It provides express service to deliver your servers to your data centers fast.
+    Which of the following channels shares a collection of offerings to help you achieve specific business outcomes related to enterprise cloud adoption through paid engagements in several specialty practice areas?
+      AWS Technical Account Manager
+      Concierge Support
+      AWS Enterprise Support
+      AWS Professional Services
+    Technical Account Manager: provide guidance/advice.
+    APN Technology Partners: create software/products running on AWS
+    APN Consulting Partner: AWS expert consulting company
+    Concierge Support is a team composed of AWS billing and acc experts
 
 
 
@@ -2777,5 +2965,3 @@ aws:
                 | Attach to EC2 | Direct  | Network | API/Web             |
                 | Scalability   | Limited | Large   | Virtually unlimited |
                 | File locking  | N/A     | Yes     | No                  |
-
-              
